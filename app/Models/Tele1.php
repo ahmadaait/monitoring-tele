@@ -9,17 +9,18 @@ Class Tele1 extends Model
 {
   use softDeletes;
 
+  protected $table = "nodes_tele_1";
   protected $fillable = [
     'MQ7',
-    // 'MQ131',
-    // 'MQ136',
-    // 'NH3',
-    // 'NO3',
-    // 'DUST',
-    // 'DHT22',
-    // 'BME280',
-    // 'RAIN',
-    // 'ANEMO',
-    // 'WIND_DIRECT'
+    'MQ131',
+    'MQ136',
+    'NH3',
+    'NO3',
+    'DUST',
+    'DHT22',
+    'BME280',
+    'RAIN',
+    'ANEMO',
+    'WIND_DIRECT'
   ];
 }

@@ -16,6 +16,17 @@ class CreateNodeTele1Table extends Migration
         Schema::create('nodes_tele_1', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('MQ7');
+            $table->string('MQ131');
+            $table->string('MQ136');
+            $table->string('NH3');
+            $table->string('NO3');
+            $table->string('DUST');
+            $table->string('DHT22');
+            $table->string('BME280');
+            $table->string('RAIN');
+            $table->string('ANEMO');
+            $table->string('WIND_DIRECT');
         });
     }
 
