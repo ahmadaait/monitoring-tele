@@ -165,34 +165,31 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <!-- <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a> -->
-                <a href="#" class="ml-1 btn btn-primary"><i class="fas fa-plus"></i>
+                <!-- <a href="#" class="ml-1 btn btn-primary"><i class="fas fa-plus"></i> -->
                 </a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>MQ7</th>
-                  </tr>
+                    <tr>
+                      <th>#</th>
+                      <th>MQ7</th>
+                    </tr>
                   </thead>
                   <tbody>
                     @php
-                      $no = 1;
+                    $no = 1
                     @endphp
                     @for ($i = sizeof($data_MQ7)-1;$i>=0;$i--)
-                    @dd($data_MQ7)
                     <tr>
                       <td>{{$no++}}</td>
                       <td>{{$data_MQ7[$i]['field1']}}</td>
-                      <td>{{$data_MQ7[$i]['created_at']}}</td>
-                      <!-- @dd($item['field1']) -->
                     </tr>
                     @endfor
                   </tbody>
                   <tfoot>
-                  <tr>
-                    <th>#</th>
-                    <th>MQ7</th>
-                  </tr>
+                    <tr>
+                      <th>#</th>
+                      <th>MQ7</th>
+                    </tr>
                   </tfoot>
                 </table>
               </div>

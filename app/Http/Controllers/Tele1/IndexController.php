@@ -17,7 +17,7 @@ class IndexController extends Controller
         $this->_tele1 = $tele1;
     }
 
-    public function index(Request $request)
+    public function index()
     {
         // $results =  $this->_tele1->getPaginate($request);
         $MQ7 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/1.json?api_key=1S7HYWX3RR862Y0W');

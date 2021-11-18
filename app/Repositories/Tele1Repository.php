@@ -1,8 +1,8 @@
 <?php
 namespace App\Repositories;
 use App\Models\Tele1;
-// use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class Tele1Repository
 {
