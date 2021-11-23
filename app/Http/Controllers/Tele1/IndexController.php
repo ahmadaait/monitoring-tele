@@ -20,7 +20,8 @@ class IndexController extends Controller
     public function index()
     {
         // $results =  $this->_tele1->getPaginate($request);
-
+        
+        // ---------------> Kualitas Udara
         // Sensor MQ-7
         $MQ7 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/1.json?api_key=1S7HYWX3RR862Y0W');
         $json_MQ7 = json_decode($MQ7, TRUE);
@@ -65,6 +66,7 @@ class IndexController extends Controller
         $jml_DUST = sizeof($data_DUST);
         $jml_arr_DUST = $data_DUST[$jml_DUST-1]['field4'];
         
+        // ---------------> Cuaca
         // Sensor DHT-22_Temperature
         $DHT22_TEMP = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/1.json?api_key=KHDHDCSC9XKKXMFT');
         $json_DHT22_TEMP = json_decode($DHT22_TEMP, TRUE);
@@ -93,6 +95,7 @@ class IndexController extends Controller
         $jml_RAIN = sizeof($data_RAIN);
         $jml_arr_RAIN = $data_RAIN[$jml_RAIN-1]['field4'];
         
+        // ---------------> Angin
         // Sensor Anemo
         $ANEMO = HTTP::GET('https://api.thingspeak.com/channels/1552255/fields/1.json?api_key=FM35EP4FE99QAXFT');
         $json_ANEMO = json_decode($ANEMO, TRUE);
