@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="refresh" content="20">
+  <!-- <meta http-equiv="refresh" content="20"> -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sistem Informasi Jadwal Pembayaran Admin Kerjasama PT DATAMAX</title>
@@ -176,7 +176,11 @@
                       <th>NH3</th>
                       <th>NO2</th>
                       <th>Dust</th>
-                      <th>Anemometer</th>
+                      <th>Temp</th>
+                      <th>Humid</th>
+                      <th>Pressure</th>
+                      <th>Rain</th>
+                      <th>Anemo</th>
                       <th>Wind Direct</th>
                     </tr>
                   </thead>
@@ -193,6 +197,10 @@
                       <td>{{$data_NH3[$i]['field5']}}</td>
                       <td>{{$data_NO2[$i]['field6']}}</td>
                       <td>{{$data_DUST[$i]['field4']}}</td>
+                      <td>{{$data_DHT22_TEMP[$i]['field1']}}</td>
+                      <td>{{$data_DHT22_HUMID[$i]['field2']}}</td>
+                      <td>{{$data_BME280[$i]['field3']}}</td>
+                      <td>{{$data_RAIN[$i]['field4']}}</td>
                       <td>{{$data_ANEMO[$i]['field1']}}</td>
                       <td>{{$data_WIND_DIRECT[$i]['field2']}}</td>
                     </tr>
@@ -207,7 +215,11 @@
                       <th>NH3</th>
                       <th>NO2</th>
                       <th>Dust</th>
-                      <th>Anemometer</th>
+                      <th>Temp</th>
+                      <th>Humid</th>
+                      <th>Pressure</th>
+                      <th>Rain</th>
+                      <th>Anemo</th>
                       <th>Wind Direct</th>
                     </tr>
                   </tfoot>
