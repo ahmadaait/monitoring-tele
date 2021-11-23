@@ -112,12 +112,12 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="{{route('user')}}" class="nav-link active">
                   <p>User</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="logout" class="nav-link active">
                   <p>Logout</p>
                 </a>
               </li>
@@ -136,7 +136,7 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
+          <div class="col-sm-12">
             <h1>Selamat Datang di Halaman Dashboard, Admin</h1>
           </div>
           <div class="col-sm-6">

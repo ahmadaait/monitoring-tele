@@ -100,23 +100,18 @@
               <li class="nav-item">
               </li>
               <!-- <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <p>Admin</p>
+                <a href="{{route('tele1')}}" class="nav-link active">
+                  <p>Device Telemetering 1</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
-                  <p>Group</p>
+                  <p>Device Telemetering 2</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
-                  <p>Installation</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <p>Payment</p>
+                  <p>Weather Forecast</p>
                 </a>
               </li>
               <li class="nav-item">

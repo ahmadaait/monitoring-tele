@@ -18,9 +18,11 @@ Route::post('login/submit', 'Login\IndexController@submit')->name('login.submit'
 Route::get('logout', 'Login\IndexController@logout')->name('logout');
 
 Route::middleware(['auth'])->group(function(){
-    Route::get('/', function () {
-        return view('index');
-    });
+    // Route::get('/', function () {
+    //     return view('index');
+    // });
+    
+    Route::get('/', 'Index\IndexController@index')->name('index');
 
     Route::get('tele1', 'Tele1\IndexController@index')->name('tele1');
     Route::get('wind', 'Wind\IndexController@index')->name('wind');
