@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv="refresh" content="20">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sistem Informasi Jadwal Pembayaran Admin Kerjasama PT DATAMAX</title>
@@ -143,10 +144,8 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Data Sensor MQ7</h1>
-          </div>
-          <div class="col-sm-6">
+          <div class="col-sm-12">
+            <h1>Data Sensor Keseluruhan Device Telemetering 1</h1>
           </div>
         </div>
       </div>
@@ -172,6 +171,13 @@
                     <tr>
                       <th>#</th>
                       <th>MQ7</th>
+                      <th>MQ131</th>
+                      <th>MQ136</th>
+                      <th>NH3</th>
+                      <th>NO2</th>
+                      <th>Dust</th>
+                      <th>Anemometer</th>
+                      <th>Wind Direct</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -182,6 +188,13 @@
                     <tr>
                       <td>{{$no++}}</td>
                       <td>{{$data_MQ7[$i]['field1']}}</td>
+                      <td>{{$data_MQ131[$i]['field2']}}</td>
+                      <td>{{$data_MQ136[$i]['field3']}}</td>
+                      <td>{{$data_NH3[$i]['field5']}}</td>
+                      <td>{{$data_NO2[$i]['field6']}}</td>
+                      <td>{{$data_DUST[$i]['field4']}}</td>
+                      <td>{{$data_ANEMO[$i]['field1']}}</td>
+                      <td>{{$data_WIND_DIRECT[$i]['field2']}}</td>
                     </tr>
                     @endfor
                   </tbody>
@@ -189,6 +202,13 @@
                     <tr>
                       <th>#</th>
                       <th>MQ7</th>
+                      <th>MQ131</th>
+                      <th>MQ136</th>
+                      <th>NH3</th>
+                      <th>NO2</th>
+                      <th>Dust</th>
+                      <th>Anemometer</th>
+                      <th>Wind Direct</th>
                     </tr>
                   </tfoot>
                 </table>
