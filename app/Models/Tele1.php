@@ -12,19 +12,19 @@ Class Tele1 extends Model
   protected $table = "nodes_tele_1";
   protected $fillable = [
     // Kualitas
-    'MQ7',
-    'MQ131',
-    'MQ136',
-    'NH3',
-    'NO3',
-    'DUST',
+    'sensor_MQ7',
+    'sensor_MQ131',
+    'sensor_MQ136',
+    'sensor_NH3',
+    'sensor_NO2',
+    'sensor_DUST',
     // Cuaca
-    'DHT22_TEMP',
-    'DHT22_HUMID',
-    'BME280',
-    'RAIN',
+    'sensor_DHT22_TEMP',
+    'sensor_DHT22_HUMID',
+    'sensor_BME280',
+    'sensor_RAIN',
     // Angin
-    'ANEMO',
-    'WIND_DIRECT'
+    'sensor_ANEMO',
+    'sensor_WIND_DIRECT'
   ];
 }

@@ -4,7 +4,7 @@
   <!-- <meta http-equiv="refresh" content="20"> -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sistem Informasi Jadwal Pembayaran Admin Kerjasama PT DATAMAX</title>
+  <title>Sistem Informasi Monitoring Cuaca Tirtarona</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -149,19 +149,19 @@
 
     <!-- Main content -->
     <section class="content">
+      <!-- Data Sensor Keseluruhan -->
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
             <div class="card">
-              <!-- <div class="card-header">
-                <h3 class="card-title">Data Admin</h3>
-              </div> -->
-              <!-- /.card-header -->
+              <div class="card-header">
+                <h3 class="card-title">Data Sensor Keseluruhan</h3>
+              </div>
               <div class="card-body">
                 <!-- <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a> -->
                 <!-- <a href="#" class="ml-1 btn btn-primary"><i class="fas fa-plus"></i> -->
                 </a>
-                <table id="example2" class="table table-bordered table-hover">
+                <table id="keseluruhan" class="table table-bordered table-hover">
                   <thead>
                     <tr>
                       <th>#</th>
@@ -220,13 +220,162 @@
                   </tfoot>
                 </table>
               </div>
-              <!-- /.card-body -->
             </div>
-            <!-- /.card -->
           </div>
-          <!-- /.col -->
         </div>
-        <!-- /.row -->
+
+        <!-- Data Sensor Kualitas Udara -->
+        <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Data Sensor Kualitas Udara</h3>
+              </div>
+              <div class="card-body">
+                <!-- <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a> -->
+                </a>
+                <table id="kualitas" class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>MQ7</th>
+                    <th>MQ131</th>
+                    <th>MQ136</th>
+                    <th>NH3</th>
+                    <th>NO2</th>
+                    <th>Dust</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @php
+                  $no = 1
+                  @endphp
+                  @for ($i = sizeof($data_MQ7)-1;$i>=0;$i--)
+                  <tr>
+                    <td>{{$no++}}</td>
+                    <td>{{$data_MQ7[$i]['field1']}}</td>
+                    <td>{{$data_MQ131[$i]['field2']}}</td>
+                    <td>{{$data_MQ136[$i]['field3']}}</td>
+                    <td>{{$data_NH3[$i]['field5']}}</td>
+                    <td>{{$data_NO2[$i]['field6']}}</td>
+                    <td>{{$data_DUST[$i]['field4']}}</td>
+                  </tr>
+                  @endfor
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>#</th>
+                    <th>MQ7</th>
+                    <th>MQ131</th>
+                    <th>MQ136</th>
+                    <th>NH3</th>
+                    <th>NO2</th>
+                    <th>Dust</th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- Data Sensor Cuaca -->
+        <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Data Sensor Cuaca</h3>
+              </div>
+              <div class="card-body">
+                <!-- <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a> -->
+                </a>
+                <table id="cuaca" class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Temp</th>
+                      <th>Humid</th>
+                      <th>Pressure</th>
+                      <th>Rain</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @php
+                    $no = 1
+                    @endphp
+                    @for ($i = sizeof($data_MQ7)-1;$i>=0;$i--)
+                    <tr>
+                      <td>{{$no++}}</td>
+                      <td>{{$data_DHT22_TEMP[$i]['field1']}}</td>
+                      <td>{{$data_DHT22_HUMID[$i]['field2']}}</td>
+                      <td>{{$data_BME280[$i]['field3']}}</td>
+                      <td>{{$data_RAIN[$i]['field4']}}</td>
+                    </tr>
+                    @endfor
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th>#</th>
+                      <th>Temp</th>
+                      <th>Humid</th>
+                      <th>Pressure</th>
+                      <th>Rain</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- Data Sensor Angin -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Data Sensor Angin</h3>
+              </div>
+              <div class="card-body">
+                <!-- <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a> -->
+                <!-- <a href="#" class="ml-1 btn btn-primary"><i class="fas fa-plus"></i> -->
+                </a>
+                <table id="angin" class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Anemo</th>
+                      <th>Wind Direct</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @php
+                    $no = 1
+                    @endphp
+                    @for ($i = sizeof($data_MQ7)-1;$i>=0;$i--)
+                    <tr>
+                      <td>{{$no++}}</td>
+                      <td>{{$data_ANEMO[$i]['field1']}}</td>
+                      <td>{{$data_WIND_DIRECT[$i]['field2']}}</td>
+                    </tr>
+                    @endfor
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th>#</th>
+                      <th>Anemo</th>
+                      <th>Wind Direct</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
       </div>
       <!-- /.container-fluid -->
     </section>
@@ -273,7 +422,37 @@
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
+    $('#keseluruhan').DataTable({
+      "paging": true,
+      "pageLength": 10,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+    $('#kualitas').DataTable({
+      "paging": true,
+      "pageLength": 10,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+    $('#cuaca').DataTable({
+      "paging": true,
+      "pageLength": 10,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+    $('#angin').DataTable({
       "paging": true,
       "pageLength": 10,
       "lengthChange": false,

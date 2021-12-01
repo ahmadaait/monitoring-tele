@@ -28,6 +28,9 @@ class IndexController extends Controller
         $jml_arr_MQ7 = $data_MQ7[$jml_MQ7-1]['field1'];
         // $conv_jml_data = (int)$jml_arr;
         // dd($data_MQ7);
+        // $save_MQ7_1 = new Quality;
+        // $save_MQ7_1->sensor_MQ7_1 = $jml_arr_MQ7;
+        // $save_MQ7_1->save();
 
         // Sensor MQ-131
         $MQ131 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/2.json?api_key=1S7HYWX3RR862Y0W');

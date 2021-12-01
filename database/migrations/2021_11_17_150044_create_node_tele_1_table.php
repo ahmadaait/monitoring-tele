@@ -16,17 +16,18 @@ class CreateNodeTele1Table extends Migration
         Schema::create('nodes_tele_1', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('MQ7')->nullable();
-            $table->string('MQ131')->nullable();
-            $table->string('MQ136')->nullable();
-            $table->string('NH3')->nullable();
-            $table->string('NO3')->nullable();
-            $table->string('DUST')->nullable();
-            $table->string('DHT22')->nullable();
-            $table->string('BME280')->nullable();
-            $table->string('RAIN')->nullable();
-            $table->string('ANEMO')->nullable();
-            $table->string('WIND_DIRECT')->nullable();
+            $table->string('sensor_MQ7')->nullable();
+            $table->string('sensor_MQ131')->nullable();
+            $table->string('sensor_MQ136')->nullable();
+            $table->string('sensor_NH3')->nullable();
+            $table->string('sensor_NO2')->nullable();
+            $table->string('sensor_DUST')->nullable();
+            $table->string('sensor_DHT22_TEMP')->nullable();
+            $table->string('sensor_DHT22_HUMID')->nullable();
+            $table->string('sensor_BME280')->nullable();
+            $table->string('sensor_RAIN')->nullable();
+            $table->string('sensor_ANEMO')->nullable();
+            $table->string('sensor_WIND_DIRECT')->nullable();
 
             $table->softDeletes();
         });
