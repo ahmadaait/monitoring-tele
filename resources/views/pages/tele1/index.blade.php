@@ -158,7 +158,7 @@
                 <h3 class="card-title">Data Sensor Keseluruhan</h3>
               </div>
               <div class="card-body">
-                <!-- <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a> -->
+                <a href="{{route('tele1.cetak_pdf')}}" class="btn btn-primary" target="_blank">CETAK PDF</a>
                 <!-- <a href="#" class="ml-1 btn btn-primary"><i class="fas fa-plus"></i> -->
                 </a>
                 <table id="keseluruhan" class="table table-bordered table-hover">

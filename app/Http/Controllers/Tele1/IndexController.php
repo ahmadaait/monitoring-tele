@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Repositories\Tele1Repository;
 use App\Models\Tele1;
 use Illuminate\Support\Facades\Http;
+use PDF;
 
 class IndexController extends Controller
 {
@@ -202,10 +203,10 @@ class IndexController extends Controller
         // return view('pages.tele1.index')->with('nodes_tele_1', $results);
     }
 
-    // public function cetak_pdf()
-    // {
-    //     $admin = Admin::all();
-    //     $pdf = PDF::loadview('pages.admin.cetak_pdf',['Admin'=>$admin]);
-    //     return $pdf->download('report-admin.pdf');
-    // }
+    public function cetak_pdf()
+    {
+        $cetak_sensor = Tele1::all();
+        $pdf = PDF::loadview('pages.tele1.cetak_pdf',['Tele1'=>$cetak_sensor]);
+        return $pdf->download('report-tele1.pdf');
+    }
 }

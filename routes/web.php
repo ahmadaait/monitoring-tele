@@ -25,6 +25,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/', 'Index\IndexController@index')->name('index');
 
     Route::get('tele1', 'Tele1\IndexController@index')->name('tele1');
+    Route::get('tele1/cetak_pdf', 'Tele1\IndexController@cetak_pdf')->name('tele1.cetak_pdf');
     Route::get('wind', 'Wind\IndexController@index')->name('wind');
     Route::get('weather', 'Weather\IndexController@index')->name('weather');
     Route::get('quality', 'Quality\IndexController@index')->name('quality');
