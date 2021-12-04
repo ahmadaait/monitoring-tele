@@ -99,36 +99,36 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
               </li>
-              <!-- <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <p>Admin</p>
+              <li class="nav-item">
+                <a href="{{route('tele1')}}" class="nav-link active">
+                  <p>Device Telemetering 1</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
-                  <p>Group</p>
+                  <p>Device Telemetering 2</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
-                  <p>Installation</p>
+                  <p>Device Telemetering 3</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <p>Payment</p>
+                <a href="{{route('forecast')}}" class="nav-link active">
+                  <p>Weather Forecast</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="{{route('user')}}" class="nav-link active">
                   <p>User</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="logout" class="nav-link active">
                   <p>Logout</p>
                 </a>
-              </li> -->
+              </li>
             </ul>
           </li>
         </ul>

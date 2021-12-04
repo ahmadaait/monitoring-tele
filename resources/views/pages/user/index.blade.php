@@ -72,7 +72,7 @@
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
       <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Siadmin</span>
+      <span class="brand-text font-weight-light">Kedaireka</span>
     </a>
 
     <!-- Sidebar -->
@@ -92,32 +92,30 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <p>Admin</p>
+                <a href="{{route('tele1')}}" class="nav-link active">
+                  <p>Device Telemetering 1</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
-                  <p>Group</p>
+                  <p>Device Telemetering 2</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
-                  <p>Installation</p>
+                  <p>Device Telemetering 3</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <p>Payment</p>
+                <a href="{{route('forecast')}}" class="nav-link active">
+                  <p>Weather Forecast</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="{{route('user')}}" class="nav-link active">
                   <p>User</p>
                 </a>
               </li>

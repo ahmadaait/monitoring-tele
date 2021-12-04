@@ -23,6 +23,14 @@ class IndexController extends Controller
         // $results =  $this->_tele1->getPaginate($request);
         
         // ---------------> Kualitas Udara
+        // Waktu
+        $waktu = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/1.json?api_key=1S7HYWX3RR862Y0W');
+        $json_waktu = json_decode($waktu, TRUE);
+        $data_waktu = ($json_waktu['feeds']);
+        $jml_waktu = sizeof($data_waktu)-1;
+        $jml_arr_waktu = $data_waktu[$jml_waktu]['created_at'];
+        // dd($jml_waktu);
+
         // Sensor MQ-7
         $MQ7 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/1.json?api_key=1S7HYWX3RR862Y0W');
         $json_MQ7 = json_decode($MQ7, TRUE);
@@ -146,8 +154,10 @@ class IndexController extends Controller
         // $save_WIND_DIRECT = new Tele1;
         // $save_WIND_DIRECT->sensor_WIND_DIRECT = $jml_arr_WIND_DIRECT;
         // $save_WIND_DIRECT->save();
+        
 
         $save_sensor = new Tele1;
+        $save_sensor->waktu = $jml_arr_waktu;
         $save_sensor->sensor_MQ7 = $jml_arr_MQ7;
         $save_sensor->sensor_MQ131 = $jml_arr_MQ131;
         $save_sensor->sensor_MQ136 = $jml_arr_MQ136;
@@ -163,6 +173,8 @@ class IndexController extends Controller
         $save_sensor->save();
 
         return view("pages.tele1.index", compact(
+            'data_waktu',
+            'jml_arr_waktu',
             // view MQ-7
             'data_MQ7',
             'jml_arr_MQ7',

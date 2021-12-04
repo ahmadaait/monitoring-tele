@@ -47,7 +47,45 @@ class IndexController extends Controller
         $data_RAIN = ($json_RAIN['feeds']);
         $jml_RAIN = sizeof($data_RAIN);
         $jml_arr_RAIN = $data_RAIN[$jml_RAIN-1]['field4'];
+
+        // Weather Forecast
+        // $FORECAST = HTTP::GET('https://data.bmkg.go.id/DataMKG/MEWS/DigitalForecast/DigitalForecast-JawaTimur.xml');
+        // $xml = simplexml_load_string($FORECAST);
+        // $forecast_encode = json_encode($xml);
+        // $json_forecast = json_decode($forecast_encode,TRUE); // Kota malang = 18 & Kab malang = 11
+        // $arr_kab_mlg = $json_forecast['forecast']['area'][11]['parameter'][0]['timerange'];
+        // dd($arr_kab_mlg);
+
+        // foreach ($arr_kab_mlg as $key => $value) {
+            
+        // }
         
+        // $array=array();
+        // $index= 0;
+        // foreach($arr_kab_mlg as $item):
+        //     $array[$index] = (integer) $item['value'];
+        //     $index++;
+        // endforeach;
+        // dd($array);
+        
+        // $url = "https://data.bmkg.go.id/DataMKG/MEWS/DigitalForecast/DigitalForecast-JawaTimur.xml"; // from http://data.bmkg.go.id/ sesuaikan dengan lokasi yang diinginkan
+        // $sUrl = file_get_contents($url, False);
+        // $xml = simplexml_load_string($sUrl);
+        // for ($i=0; $i<sizeof($xml->Isi->Row); $i++) {
+        //     $row = $xml->Isi->Row[$i];
+        //     if(strtolower($row->Kota) == "malang") {// blitar merupakan contoh kota yang diambil data cuacanya dari bmkg
+        //         echo "<b>" . strtoupper($row->Kota) . "</b><br/>";
+        //         echo "<img src='http://www.bmkg.go.id/ImagesStatus/" . $row->Cuaca . ".gif' alt='" . $row->Cuaca . "'><br/>";
+        //         echo "Cuaca : " . $row->Cuaca . "<br/>";
+        //         echo "Suhu : " . $row->SuhuMin . " - ".$row->SuhuMax . " &deg;C<br/>";
+        //         echo "Kelembapan : " . $row->KelembapanMin . " - " . $row->KelembapanMax . " %<br/>";
+        //         echo "Kecepatan Angin : " . $row->KecepatanAngin . " (km/jam)<br/>";
+        //         echo "Arah Angin : " . $row->ArahAngin . "<br/>";
+        //         break;
+        //     }
+        // }
+        // dd($row->Kota);
+
         return view("pages.weather.index", compact(
             // ----------------------> Device 1
             // view DHT22_TEMP

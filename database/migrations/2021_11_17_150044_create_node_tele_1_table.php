@@ -16,6 +16,7 @@ class CreateNodeTele1Table extends Migration
         Schema::create('nodes_tele_1', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('waktu')->nullable();
             $table->string('sensor_MQ7')->nullable();
             $table->string('sensor_MQ131')->nullable();
             $table->string('sensor_MQ136')->nullable();

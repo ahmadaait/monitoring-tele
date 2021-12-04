@@ -143,9 +143,10 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
+      <div class="row">
         <div class="row mb-2">
           <div class="col-sm-12">
-            <h1>Data Sensor Keseluruhan Kualitas Udara</h1>
+            <h1>Data Prakiraan Cuaca</h1>
           </div>
         </div>
       </div>
@@ -155,69 +156,51 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <!-- <div class="card-header">
-                <h3 class="card-title">Data Admin</h3>
-              </div> -->
-              <!-- /.card-header -->
-              <div class="card-body">
-                <!-- <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a> -->
-                <!-- <a href="#" class="ml-1 btn btn-primary"><i class="fas fa-plus"></i> -->
-                </a>
-                <table id="example2" class="table table-bordered table-hover">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>MQ7</th>
-                      <th>MQ131</th>
-                      <th>MQ136</th>
-                      <th>NH3</th>
-                      <th>NO2</th>
-                      <th>Dust</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @php
-                    $no = 1
-                    @endphp
-                    @for ($i = sizeof($data_MQ7)-1;$i>=0;$i--)
-                    <tr>
-                      <td>{{$no++}}</td>
-                      <td>{{$data_MQ7[$i]['field1']}}</td>
-                      <td>{{$data_MQ131[$i]['field2']}}</td>
-                      <td>{{$data_MQ136[$i]['field3']}}</td>
-                      <td>{{$data_NH3[$i]['field5']}}</td>
-                      <td>{{$data_NO2[$i]['field6']}}</td>
-                      <td>{{$data_DUST[$i]['field4']}}</td>
-                    </tr>
-                    @endfor
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <th>#</th>
-                      <th>MQ7</th>
-                      <th>MQ131</th>
-                      <th>MQ136</th>
-                      <th>NH3</th>
-                      <th>NO2</th>
-                      <th>Dust</th>
-                    </tr>
-                  </tfoot>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
+        <div class="info-box mb-3 col-12 col-sm-6 col-md-3">
+          <center>
+            <div id="openweathermap-widget-2"></div>
+          </center>
         </div>
-        <!-- /.row -->
+        <!-- Data Ramalan per hari -->
+        <div class="info-box mb-3 col-12 col-sm-6 col-md-2">
+         <div class="info-box-content">
+            <center>
+              <span class="info-box-text">
+                @foreach($data_forecast_today as $item)
+                  Cuaca Hari ini : {{$item['main']}} <br><br>
+                @endforeach
+              </span>
+            </center>
+          </div>
+        </div>
+        <!-- Data Ramalan 8 Hari (per 3 jam) -->
+        <div class="info-box mb-3 col-12 col-sm-6 col-md-8">
+          <center>
+            <div id="openweathermap-widget-1"></div>
+          </center>
+        </div>
+        <div class="info-box mb-3 col-12 col-sm-6 col-md-5">
+          <div class="info-box-content">
+            <!-- <center> -->
+              <span class="info-box-text">
+                @php
+                  $no = 1;
+                @endphp
+                @foreach($data_forecast as $item)
+                  {{$no++}}.
+                  @foreach($item['weather'] as $w)
+                    Cuaca : {{$w['main']}} ||
+                  @endforeach
+                    Datetime : {{$item['dt_txt']}} <br>
+                @endforeach
+              </span>
+              <span class="info-box-number"></span>
+            <!-- </center> -->
+          </div>
+        </div>
       </div>
-      <!-- /.container-fluid -->
+      </div>
     </section>
-    <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -232,6 +215,8 @@
 </div>
 <!-- ./wrapper -->
 
+<!-- Weather Forecast Widget -->
+<script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
 <!-- jQuery -->
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -254,23 +239,42 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <!-- Page specific script -->
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "pageLength": 10,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-</script>
 </body>
 </html>
+
+<script>
+  window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+  window.myWidgetParam.push({
+    id: 2,
+    cityid: '1636722',
+    appid: 'bcccbaa299b2e0df1fac63f71d3ccdd5',
+    units: 'metric',
+    containerid: 'openweathermap-widget-2',
+  });
+  (function() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.charset = "utf-8";
+    script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(script, s);
+  })();
+</script>
+<script>
+  window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  
+  window.myWidgetParam.push({
+    id: 1,
+    cityid: '1636722',
+    appid: 'bcccbaa299b2e0df1fac63f71d3ccdd5',
+    units: 'metric',
+    containerid: 'openweathermap-widget-1',  
+  });
+  (function() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.charset = "utf-8";
+    script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(script, s);  
+  })();
+</script>

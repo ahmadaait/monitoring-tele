@@ -89,9 +89,6 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <!-- Node 1 -->
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
               <li class="nav-item">
@@ -108,6 +105,11 @@
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
+                  <p>Device Telemetering 3</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('forecast')}}" class="nav-link active">
                   <p>Weather Forecast</p>
                 </a>
               </li>
@@ -157,34 +159,31 @@
               <!-- /.card-header -->
               <div class="card-body container-fluid">
                 <div class="row">
-                  <a href= "tele1" class="btn col-12 col-sm-6 col-md-3 card-link active">
+                  <a href= "{{route('quality')}}" class="btn col-12 col-sm-6 col-md-3 card-link active">
                     <div class="info-box mb-3">
                       <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
                       <div class="info-box-content">
-                        <span class="info-box-text">Sensor MQ-7</span>
-                        <span class="info-box-number"></span>
+                        <span class="info-box-text">Kualitas Udara</span>
                       </div>
                     </div>
                   </a>
-                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
+                  <a href="{{route('weather')}}" class="btn col-12 col-sm-6 col-md-3 card-link active">
                     <div class="info-box mb-3">
                       <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
                       <div class="info-box-content">
-                        <span class="info-box-text">Sensor MQ-131</span>
-                        <span class="info-box-number"></span>
+                        <span class="info-box-text">Cuaca</span>
                       </div>
                     </div>
                   </a>
-                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
+                  <a href="{{route('wind')}}" class="btn col-12 col-sm-6 col-md-3 card-link active">
                     <div class="info-box mb-3">
                       <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
                       <div class="info-box-content">
-                        <span class="info-box-text">Sensor MQ-136</span>
-                        <span class="info-box-number"></span>
+                        <span class="info-box-text">Keadaan Angin</span>
                       </div>
                     </div>
                   </a>
-                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
+                  <!-- <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
                     <div class="info-box mb-3">
                       <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
                       <div class="info-box-content">
@@ -246,7 +245,7 @@
                         <span class="info-box-number"></span>
                       </div>
                     </div>
-                  </a>
+                  </a> -->
                 </div>
               </div>
               <!-- /.card-body -->

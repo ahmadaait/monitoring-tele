@@ -11,6 +11,7 @@ Class Tele1 extends Model
 
   protected $table = "nodes_tele_1";
   protected $fillable = [
+    'waktu',
     // Kualitas
     'sensor_MQ7',
     'sensor_MQ131',

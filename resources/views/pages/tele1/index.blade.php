@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="refresh" content="60">
+  <meta http-equiv="refresh" content="120">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sistem Informasi Monitoring Cuaca Tirtarona</title>
@@ -99,7 +99,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
               </li>
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a href="{{route('tele1')}}" class="nav-link active">
                   <p>Device Telemetering 1</p>
                 </a>
@@ -111,19 +111,24 @@
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
+                  <p>Device Telemetering 3</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('forecast')}}" class="nav-link active">
                   <p>Weather Forecast</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="{{route('user')}}" class="nav-link active">
                   <p>User</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="logout" class="nav-link active">
                   <p>Logout</p>
                 </a>
-              </li> -->
+              </li>
             </ul>
           </li>
         </ul>
@@ -165,6 +170,7 @@
                   <thead>
                     <tr>
                       <th>#</th>
+                      <th>Waktu</th>
                       <th>MQ7</th>
                       <th>MQ131</th>
                       <th>MQ136</th>
@@ -186,6 +192,7 @@
                     @for ($i = sizeof($data_MQ7)-1;$i>=0;$i--)
                     <tr>
                       <td>{{$no++}}</td>
+                      <td>{{$data_waktu[$i]['created_at']}}</td>
                       <td>{{$data_MQ7[$i]['field1']}}</td>
                       <td>{{$data_MQ131[$i]['field2']}}</td>
                       <td>{{$data_MQ136[$i]['field3']}}</td>
@@ -204,6 +211,7 @@
                   <tfoot>
                     <tr>
                       <th>#</th>
+                      <th>Waktu</th>
                       <th>MQ7</th>
                       <th>MQ131</th>
                       <th>MQ136</th>
@@ -239,6 +247,7 @@
                 <thead>
                   <tr>
                     <th>#</th>
+                    <th>Waktu</th>
                     <th>MQ7</th>
                     <th>MQ131</th>
                     <th>MQ136</th>
@@ -254,6 +263,7 @@
                   @for ($i = sizeof($data_MQ7)-1;$i>=0;$i--)
                   <tr>
                     <td>{{$no++}}</td>
+                    <td>{{$data_waktu[$i]['created_at']}}</td>
                     <td>{{$data_MQ7[$i]['field1']}}</td>
                     <td>{{$data_MQ131[$i]['field2']}}</td>
                     <td>{{$data_MQ136[$i]['field3']}}</td>
@@ -266,6 +276,7 @@
                 <tfoot>
                   <tr>
                     <th>#</th>
+                    <th>Waktu</th>
                     <th>MQ7</th>
                     <th>MQ131</th>
                     <th>MQ136</th>
@@ -295,6 +306,7 @@
                   <thead>
                     <tr>
                       <th>#</th>
+                      <th>Waktu</th>
                       <th>Temp</th>
                       <th>Humid</th>
                       <th>Pressure</th>
@@ -308,6 +320,7 @@
                     @for ($i = sizeof($data_MQ7)-1;$i>=0;$i--)
                     <tr>
                       <td>{{$no++}}</td>
+                      <td>{{$data_waktu[$i]['created_at']}}</td>
                       <td>{{$data_DHT22_TEMP[$i]['field1']}}</td>
                       <td>{{$data_DHT22_HUMID[$i]['field2']}}</td>
                       <td>{{$data_BME280[$i]['field3']}}</td>
@@ -318,6 +331,7 @@
                   <tfoot>
                     <tr>
                       <th>#</th>
+                      <th>Waktu</th>
                       <th>Temp</th>
                       <th>Humid</th>
                       <th>Pressure</th>
@@ -347,6 +361,7 @@
                   <thead>
                     <tr>
                       <th>#</th>
+                      <th>Waktu</th>
                       <th>Anemo</th>
                       <th>Wind Direct</th>
                     </tr>
@@ -358,6 +373,7 @@
                     @for ($i = sizeof($data_MQ7)-1;$i>=0;$i--)
                     <tr>
                       <td>{{$no++}}</td>
+                      <td>{{$data_waktu[$i]['created_at']}}</td>
                       <td>{{$data_ANEMO[$i]['field1']}}</td>
                       <td>{{$data_WIND_DIRECT[$i]['field2']}}</td>
                     </tr>
@@ -366,6 +382,7 @@
                   <tfoot>
                     <tr>
                       <th>#</th>
+                      <th>Waktu</th>
                       <th>Anemo</th>
                       <th>Wind Direct</th>
                     </tr>
