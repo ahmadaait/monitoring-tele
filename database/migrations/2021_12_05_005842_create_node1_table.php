@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNodeTele1Table extends Migration
+class CreateNode1Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateNodeTele1Table extends Migration
      */
     public function up()
     {
-        Schema::create('nodes_tele_1', function (Blueprint $table) {
+        Schema::create('nodes1', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->dateTime('waktu')->nullable();
@@ -31,8 +31,6 @@ class CreateNodeTele1Table extends Migration
             
             $table->string('sensor_WIND_SPEED')->nullable();
             $table->string('sensor_WIND_DIRECT')->nullable();
-
-            $table->softDeletes();
         });
     }
 
@@ -43,6 +41,6 @@ class CreateNodeTele1Table extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nodes_tele_1');
+        Schema::dropIfExists('nodes1');
     }
 }

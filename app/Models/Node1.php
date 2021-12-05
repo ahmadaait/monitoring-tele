@@ -5,27 +5,26 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-Class Tele1 extends Model
+Class Node1 extends Model
 {
-  use softDeletes;
 
-  protected $table = "nodes_tele_1";
+  protected $table = "nodes1";
   protected $fillable = [
     'waktu',
     // Kualitas
-    'sensor_MQ7',
-    'sensor_MQ131',
-    'sensor_MQ136',
+    'sensor_CO',
+    'sensor_O3',
+    'sensor_H2S',
+    'sensor_DUST',
     'sensor_NH3',
     'sensor_NO2',
-    'sensor_DUST',
     // Cuaca
-    'sensor_DHT22_TEMP',
-    'sensor_DHT22_HUMID',
-    'sensor_BME280',
+    'sensor_TEMPERATURE',
+    'sensor_HUMIDITY',
+    'sensor_PRESSURE',
     'sensor_RAIN',
     // Angin
-    'sensor_ANEMO',
+    'sensor_WIND_SPEED',
     'sensor_WIND_DIRECT'
   ];
 }

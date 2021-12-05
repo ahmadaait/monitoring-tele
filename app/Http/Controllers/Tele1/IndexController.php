@@ -3,221 +3,231 @@
 namespace App\Http\Controllers\Tele1;
 
 use App\Http\Controllers\Controller;
+use App\Models\Node1;
 use Illuminate\Http\Request;
-use App\Repositories\Tele1Repository;
-use App\Models\Tele1;
 use Illuminate\Support\Facades\Http;
 use PDF;
 
 class IndexController extends Controller
 {
-
-    protected $_tele1;
-    public function __construct(Tele1Repository $tele1)
+    public function __construct()
     {
-        $this->_tele1 = $tele1;
+
     }
+
+//     public function index()
+//     {
+//         dd(date('Y-m-d H:i:s',strtotime('2021-12-04T07:40:34Z')));
+// // data masuk database
+//         // $results =  $this->_tele1->getPaginate($request);
+        
+//         // ---------------> Kualitas Udara
+//         // Waktu
+//         $waktu = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/1.json?api_key=1S7HYWX3RR862Y0W');
+//         $json_waktu = json_decode($waktu, TRUE);
+//         $data_waktu = ($json_waktu['feeds']);
+//         $jml_waktu = sizeof($data_waktu)-1;
+//         $jml_arr_waktu = $data_waktu[$jml_waktu]['created_at'];
+//         // dd($jml_waktu);?
+
+//         // Sensor CO
+//         $CO = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/1.json?api_key=1S7HYWX3RR862Y0W');
+//         $json_CO = json_decode($CO, TRUE);
+//         $data_CO = ($json_CO['feeds']);
+//         $jml_CO = sizeof($data_CO);
+//         $jml_arr_CO = $data_CO[$jml_CO-1]['field1'];
+//         // $conv_jml_data = (int)$jml_arr;
+//         // dd($data_CO);
+//         // $save_CO = new Tele1;
+//         // $save_CO->sensor_CO = $jml_arr_CO;
+//         // $save_CO->save();
+
+//         // Sensor O3
+//         $O3 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/2.json?api_key=1S7HYWX3RR862Y0W');
+//         $json_O3 = json_decode($O3, TRUE);
+//         $data_O3 = ($json_O3['feeds']);
+//         $jml_O3 = sizeof($data_O3);
+//         $jml_arr_O3 = $data_O3[$jml_O3-1]['field2'];
+//         // $save_O3 = new Tele1;
+//         // $save_O3->sensor_O3 = $jml_arr_O3;
+//         // $save_O3->save();
+        
+//         // Sensor H2S
+//         $H2S = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/3.json?api_key=1S7HYWX3RR862Y0W');
+//         $json_H2S = json_decode($H2S, TRUE);
+//         $data_H2S = ($json_H2S['feeds']);
+//         $jml_H2S = sizeof($data_H2S);
+//         $jml_arr_H2S = $data_H2S[$jml_H2S-1]['field3'];
+//         // $save_H2S = new Tele1;
+//         // $save_H2S->sensor_H2S = $jml_arr_H2S;
+//         // $save_H2S->save();
+        
+// // SUARAMU ORA KRUNGU
+
+//         // Sensor DUST
+//         $DUST = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/4.json?api_key=1S7HYWX3RR862Y0W');
+//         $json_DUST = json_decode($DUST, TRUE);
+//         $data_DUST = ($json_DUST['feeds']);
+//         $jml_DUST = sizeof($data_DUST);
+//         $jml_arr_DUST = $data_DUST[$jml_DUST-1]['field4'];
+//         // $save_DUST = new Tele1;
+//         // $save_DUST->sensor_DUST = $jml_arr_DUST;
+//         // $save_DUST->save();
+
+//         // Sensor NH3
+//         $NH3 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/5.json?api_key=1S7HYWX3RR862Y0W');
+//         $json_NH3 = json_decode($NH3, TRUE);
+//         $data_NH3 = ($json_NH3['feeds']);
+//         $jml_NH3 = sizeof($data_NH3);
+//         $jml_arr_NH3 = $data_NH3[$jml_NH3-1]['field5'];
+//         // $save_NH3 = new Tele1;
+//         // $save_NH3->sensor_NH3 = $jml_arr_NH3;
+//         // $save_NH3->save();
+
+//         // Sensor NO2
+//         $NO2 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/6.json?api_key=1S7HYWX3RR862Y0W');
+//         $json_NO2 = json_decode($NO2, TRUE);
+//         $data_NO2 = ($json_NO2['feeds']);
+//         $jml_NO2 = sizeof($data_NO2);
+//         $jml_arr_NO2 = $data_NO2[$jml_NO2-1]['field6'];
+//         // $save_DUST = new Tele1;
+//         // $save_DUST->sensor_DUST = $jml_arr_DUST;
+//         // $save_DUST->save();
+
+//         // ---------------> Cuaca
+//         // Sensor TEMPERATURE
+//         $TEMPERATURE = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/1.json?api_key=KHDHDCSC9XKKXMFT');
+//         $json_TEMPERATURE = json_decode($TEMPERATURE, TRUE);
+//         $data_TEMPERATURE = ($json_TEMPERATURE['feeds']);
+//         $jml_TEMPERATURE = sizeof($data_TEMPERATURE);
+//         $jml_arr_TEMPERATURE = $data_TEMPERATURE[$jml_TEMPERATURE-1]['field1'];
+//         // $save_TEMPERATURE = new Tele1;
+//         // $save_TEMPERATURE->sensor_TEMPERATURE = $jml_arr_TEMPERATURE;
+//         // $save_TEMPERATURE->save();
+
+//         // Sensor HUMIDITY
+//         $HUMIDITY = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/2.json?api_key=KHDHDCSC9XKKXMFT');
+//         $json_HUMIDITY = json_decode($HUMIDITY, TRUE);
+//         $data_HUMIDITY = ($json_HUMIDITY['feeds']);
+//         $jml_HUMIDITY = sizeof($data_HUMIDITY);
+//         $jml_arr_HUMIDITY = $data_HUMIDITY[$jml_HUMIDITY-1]['field2'];
+//         // $save_HUMIDITY = new Tele1;
+//         // $save_HUMIDITY->sensor_HUMIDITY = $jml_arr_HUMIDITY;
+//         // $save_HUMIDITY->save();
+
+//         // Sensor PRESSURE
+//         $PRESSURE = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/3.json?api_key=KHDHDCSC9XKKXMFT');
+//         $json_BME28O = json_decode($PRESSURE, TRUE);
+//         $data_PRESSURE = ($json_BME28O['feeds']);
+//         $jml_PRESSURE = sizeof($data_PRESSURE);
+//         $jml_arr_PRESSURE = $data_PRESSURE[$jml_PRESSURE-1]['field3'];
+//         // $save_PRESSURE = new Tele1;
+//         // $save_PRESSURE->sensor_PRESSURE = $jml_arr_PRESSURE;
+//         // $save_PRESSURE->save();
+
+//         // Sensor RAIN
+//         $RAIN = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/4.json?api_key=KHDHDCSC9XKKXMFT');
+//         $json_RAIN = json_decode($RAIN, TRUE);
+//         $data_RAIN = ($json_RAIN['feeds']);
+//         $jml_RAIN = sizeof($data_RAIN);
+//         $jml_arr_RAIN = $data_RAIN[$jml_RAIN-1]['field4'];
+//         // $save_RAIN = new Tele1;
+//         // $save_RAIN->sensor_RAIN = $jml_arr_RAIN;
+//         // $save_RAIN->save();
+
+//         // ---------------> Angin
+//         // Sensor WIND SPEED
+//         $WIND_SPEED = HTTP::GET('https://api.thingspeak.com/channels/1552255/fields/1.json?api_key=FM35EP4FE99QAXFT');
+//         $json_WIND_SPEED = json_decode($WIND_SPEED, TRUE);
+//         $data_WIND_SPEED = ($json_WIND_SPEED['feeds']);
+//         $jml_WIND_SPEED = sizeof($data_WIND_SPEED);
+//         $jml_arr_WIND_SPEED = $data_WIND_SPEED[$jml_WIND_SPEED-1]['field1'];
+//         // $save_WIND_SPEED = new Tele1;
+//         // $save_WIND_SPEED->sensor_WIND_SPEED = $jml_arr_WIND_SPEED;
+//         // $save_WIND_SPEED->save();
+
+//         // Sensor WIND DIRECT
+//         $WIND_DIRECT = HTTP::GET('https://api.thingspeak.com/channels/1552255/fields/2.json?api_key=FM35EP4FE99QAXFT');
+//         $json_WIND_DIRECT = json_decode($WIND_DIRECT, TRUE);
+//         $data_WIND_DIRECT = ($json_WIND_DIRECT['feeds']);
+//         $jml_WIND_DIRECT = sizeof($data_WIND_DIRECT);
+//         $jml_arr_WIND_DIRECT = $data_WIND_DIRECT[$jml_WIND_DIRECT-1]['field2'];
+//         // $save_WIND_DIRECT = new Tele1;
+//         // $save_WIND_DIRECT->sensor_WIND_DIRECT = $jml_arr_WIND_DIRECT;
+//         // $save_WIND_DIRECT->save();
+        
+
+//         $save_sensor = new Tele1;
+//         $save_sensor->waktu = $jml_arr_waktu;
+//         $save_sensor->sensor_CO = $jml_arr_CO;
+//         $save_sensor->sensor_O3 = $jml_arr_O3;
+//         $save_sensor->sensor_H2S = $jml_arr_H2S;
+//         $save_sensor->sensor_DUST = $jml_arr_DUST;
+//         $save_sensor->sensor_NH3 = $jml_arr_NH3;
+//         $save_sensor->sensor_NO2 = $jml_arr_NO2;
+//         $save_sensor->sensor_TEMPERATURE = $jml_arr_TEMPERATURE;
+//         $save_sensor->sensor_HUMIDITY = $jml_arr_HUMIDITY;
+//         $save_sensor->sensor_PRESSURE = $jml_arr_PRESSURE;
+//         $save_sensor->sensor_RAIN = $jml_arr_RAIN;
+//         $save_sensor->sensor_WIND_SPEED = $jml_arr_WIND_SPEED;
+//         $save_sensor->sensor_WIND_DIRECT = $jml_arr_WIND_DIRECT;
+//         $save_sensor->save();
+
+//         // dd($data_CO);
+//         return view("pages.tele1.index", compact(
+//             'data_waktu',
+//             'jml_arr_waktu',
+//             // view MQ-7
+//             'data_CO',
+//             'jml_arr_CO',
+// // tanggal e soale ngga genah ndek kono iku
+// // date('Y-m-d H:i:s',strtotime(ambilfieldwaktu));
+//             // view MQ-131
+//             'data_O3',
+//             'jml_arr_O3',
+//             // view MQ-136
+//             'data_H2S',
+//             'jml_arr_H2S',
+//             // view DUST
+//             'data_NO2',
+//             'jml_arr_NO2',
+//             // view NH3
+//             'data_NH3',
+//             'jml_arr_NH3',
+//             // view DUST
+//             'data_DUST',
+//             'jml_arr_DUST',
+//             // view TEMPERATURE
+//             'data_TEMPERATURE',
+//             'jml_arr_TEMPERATURE',
+//             // view HUMIDITY
+//             'data_HUMIDITY',
+//             'jml_arr_HUMIDITY',
+//             // view PRESSURE
+//             'data_PRESSURE',
+//             'jml_arr_PRESSURE',
+//             // view RAIN
+//             'data_RAIN',
+//             'jml_arr_RAIN',
+//             // view WIND_SPEED
+//             'data_WIND_SPEED',
+//             'jml_arr_WIND_SPEED',
+//             // view WIND_DIRECT
+//             'data_WIND_DIRECT',
+//             'jml_arr_WIND_DIRECT'
+//         ));
+//         // return view('pages.tele1.index')->with('nodes_tele_1', $results);
+//     }
 
     public function index()
     {
-        // $results =  $this->_tele1->getPaginate($request);
-        
-        // ---------------> Kualitas Udara
-        // Waktu
-        $waktu = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/1.json?api_key=1S7HYWX3RR862Y0W');
-        $json_waktu = json_decode($waktu, TRUE);
-        $data_waktu = ($json_waktu['feeds']);
-        $jml_waktu = sizeof($data_waktu)-1;
-        $jml_arr_waktu = $data_waktu[$jml_waktu]['created_at'];
-        // dd($jml_waktu);
-
-        // Sensor MQ-7
-        $MQ7 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/1.json?api_key=1S7HYWX3RR862Y0W');
-        $json_MQ7 = json_decode($MQ7, TRUE);
-        $data_MQ7 = ($json_MQ7['feeds']);
-        $jml_MQ7 = sizeof($data_MQ7);
-        $jml_arr_MQ7 = $data_MQ7[$jml_MQ7-1]['field1'];
-        // $conv_jml_data = (int)$jml_arr;
-        // dd($data_MQ7);
-        // $save_MQ7 = new Tele1;
-        // $save_MQ7->sensor_MQ7 = $jml_arr_MQ7;
-        // $save_MQ7->save();
-
-        // Sensor MQ-131
-        $MQ131 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/2.json?api_key=1S7HYWX3RR862Y0W');
-        $json_MQ131 = json_decode($MQ131, TRUE);
-        $data_MQ131 = ($json_MQ131['feeds']);
-        $jml_MQ131 = sizeof($data_MQ131);
-        $jml_arr_MQ131 = $data_MQ131[$jml_MQ131-1]['field2'];
-        // $save_MQ131 = new Tele1;
-        // $save_MQ131->sensor_MQ131 = $jml_arr_MQ131;
-        // $save_MQ131->save();
-        
-        // Sensor MQ-136
-        $MQ136 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/3.json?api_key=1S7HYWX3RR862Y0W');
-        $json_MQ136 = json_decode($MQ136, TRUE);
-        $data_MQ136 = ($json_MQ136['feeds']);
-        $jml_MQ136 = sizeof($data_MQ136);
-        $jml_arr_MQ136 = $data_MQ136[$jml_MQ136-1]['field3'];
-        // $save_MQ136 = new Tele1;
-        // $save_MQ136->sensor_MQ136 = $jml_arr_MQ136;
-        // $save_MQ136->save();
-        
-        // Sensor NH3
-        $NH3 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/5.json?api_key=1S7HYWX3RR862Y0W');
-        $json_NH3 = json_decode($NH3, TRUE);
-        $data_NH3 = ($json_NH3['feeds']);
-        $jml_NH3 = sizeof($data_NH3);
-        $jml_arr_NH3 = $data_NH3[$jml_NH3-1]['field5'];
-        // $save_NH3 = new Tele1;
-        // $save_NH3->sensor_NH3 = $jml_arr_NH3;
-        // $save_NH3->save();
-
-        // Sensor NO2
-        $NO2 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/6.json?api_key=1S7HYWX3RR862Y0W');
-        $json_NO2 = json_decode($NO2, TRUE);
-        $data_NO2 = ($json_NO2['feeds']);
-        $jml_NO2 = sizeof($data_NO2);
-        $jml_arr_NO2 = $data_NO2[$jml_NO2-1]['field6'];
-        // $save_NO2 = new Tele1;
-        // $save_NO2->sensor_NO2 = $jml_arr_NO2;
-        // $save_NO2->save();
-
-        // Sensor Dust
-        $DUST = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/4.json?api_key=1S7HYWX3RR862Y0W');
-        $json_DUST = json_decode($DUST, TRUE);
-        $data_DUST = ($json_DUST['feeds']);
-        $jml_DUST = sizeof($data_DUST);
-        $jml_arr_DUST = $data_DUST[$jml_DUST-1]['field4'];
-        // $save_DUST = new Tele1;
-        // $save_DUST->sensor_DUST = $jml_arr_DUST;
-        // $save_DUST->save();
-
-        // ---------------> Cuaca
-        // Sensor DHT-22_Temperature
-        $DHT22_TEMP = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/1.json?api_key=KHDHDCSC9XKKXMFT');
-        $json_DHT22_TEMP = json_decode($DHT22_TEMP, TRUE);
-        $data_DHT22_TEMP = ($json_DHT22_TEMP['feeds']);
-        $jml_DHT22_TEMP = sizeof($data_DHT22_TEMP);
-        $jml_arr_DHT22_TEMP = $data_DHT22_TEMP[$jml_DHT22_TEMP-1]['field1'];
-        // $save_DHT22_TEMP = new Tele1;
-        // $save_DHT22_TEMP->sensor_DHT22_TEMP = $jml_arr_DHT22_TEMP;
-        // $save_DHT22_TEMP->save();
-
-        // Sensor DHT-22_Humidity
-        $DHT22_HUMID = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/2.json?api_key=KHDHDCSC9XKKXMFT');
-        $json_DHT22_HUMID = json_decode($DHT22_HUMID, TRUE);
-        $data_DHT22_HUMID = ($json_DHT22_HUMID['feeds']);
-        $jml_DHT22_HUMID = sizeof($data_DHT22_HUMID);
-        $jml_arr_DHT22_HUMID = $data_DHT22_HUMID[$jml_DHT22_HUMID-1]['field2'];
-        // $save_DHT22_HUMID = new Tele1;
-        // $save_DHT22_HUMID->sensor_DHT22_HUMID = $jml_arr_DHT22_HUMID;
-        // $save_DHT22_HUMID->save();
-
-        // Sensor BME280 (Tekanan udara)
-        $BME280 = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/3.json?api_key=KHDHDCSC9XKKXMFT');
-        $json_BME28O = json_decode($BME280, TRUE);
-        $data_BME280 = ($json_BME28O['feeds']);
-        $jml_BME280 = sizeof($data_BME280);
-        $jml_arr_BME280 = $data_BME280[$jml_BME280-1]['field3'];
-        // $save_BME280 = new Tele1;
-        // $save_BME280->sensor_BME280 = $jml_arr_BME280;
-        // $save_BME280->save();
-
-        // Sensor Rain
-        $RAIN = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/4.json?api_key=KHDHDCSC9XKKXMFT');
-        $json_RAIN = json_decode($RAIN, TRUE);
-        $data_RAIN = ($json_RAIN['feeds']);
-        $jml_RAIN = sizeof($data_RAIN);
-        $jml_arr_RAIN = $data_RAIN[$jml_RAIN-1]['field4'];
-        // $save_RAIN = new Tele1;
-        // $save_RAIN->sensor_RAIN = $jml_arr_RAIN;
-        // $save_RAIN->save();
-
-        // ---------------> Angin
-        // Sensor Anemo
-        $ANEMO = HTTP::GET('https://api.thingspeak.com/channels/1552255/fields/1.json?api_key=FM35EP4FE99QAXFT');
-        $json_ANEMO = json_decode($ANEMO, TRUE);
-        $data_ANEMO = ($json_ANEMO['feeds']);
-        $jml_ANEMO = sizeof($data_ANEMO);
-        $jml_arr_ANEMO = $data_ANEMO[$jml_ANEMO-1]['field1'];
-        // $save_ANEMO = new Tele1;
-        // $save_ANEMO->sensor_ANEMO = $jml_arr_ANEMO;
-        // $save_ANEMO->save();
-
-        // Sensor Wind_direct
-        $WIND_DIRECT = HTTP::GET('https://api.thingspeak.com/channels/1552255/fields/2.json?api_key=FM35EP4FE99QAXFT');
-        $json_WIND_DIRECT = json_decode($WIND_DIRECT, TRUE);
-        $data_WIND_DIRECT = ($json_WIND_DIRECT['feeds']);
-        $jml_WIND_DIRECT = sizeof($data_WIND_DIRECT);
-        $jml_arr_WIND_DIRECT = $data_WIND_DIRECT[$jml_WIND_DIRECT-1]['field2'];
-        // $save_WIND_DIRECT = new Tele1;
-        // $save_WIND_DIRECT->sensor_WIND_DIRECT = $jml_arr_WIND_DIRECT;
-        // $save_WIND_DIRECT->save();
-        
-
-        $save_sensor = new Tele1;
-        $save_sensor->waktu = $jml_arr_waktu;
-        $save_sensor->sensor_MQ7 = $jml_arr_MQ7;
-        $save_sensor->sensor_MQ131 = $jml_arr_MQ131;
-        $save_sensor->sensor_MQ136 = $jml_arr_MQ136;
-        $save_sensor->sensor_NH3 = $jml_arr_NH3;
-        $save_sensor->sensor_NO2 = $jml_arr_NO2;
-        $save_sensor->sensor_DUST = $jml_arr_DUST;
-        $save_sensor->sensor_DHT22_TEMP = $jml_arr_DHT22_TEMP;
-        $save_sensor->sensor_DHT22_HUMID = $jml_arr_DHT22_HUMID;
-        $save_sensor->sensor_BME280 = $jml_arr_BME280;
-        $save_sensor->sensor_RAIN = $jml_arr_RAIN;
-        $save_sensor->sensor_ANEMO = $jml_arr_ANEMO;
-        $save_sensor->sensor_WIND_DIRECT = $jml_arr_WIND_DIRECT;
-        $save_sensor->save();
-
-        return view("pages.tele1.index", compact(
-            'data_waktu',
-            'jml_arr_waktu',
-            // view MQ-7
-            'data_MQ7',
-            'jml_arr_MQ7',
-            // view MQ-131
-            'data_MQ131',
-            'jml_arr_MQ131',
-            // view MQ-136
-            'data_MQ136',
-            'jml_arr_MQ136',
-            // view NH3
-            'data_NH3',
-            'jml_arr_NH3',
-            // view NO2
-            'data_NO2',
-            'jml_arr_NO2',
-            // view DUST
-            'data_DUST',
-            'jml_arr_DUST',
-            // view DHT22_TEMP
-            'data_DHT22_TEMP',
-            'jml_arr_DHT22_TEMP',
-            // view DHT22_HUMID
-            'data_DHT22_HUMID',
-            'jml_arr_DHT22_HUMID',
-            // view BME280
-            'data_BME280',
-            'jml_arr_BME280',
-            // view RAIN
-            'data_RAIN',
-            'jml_arr_RAIN',
-            // view ANEMO
-            'data_ANEMO',
-            'jml_arr_ANEMO',
-            // view WIND_DIRECT
-            'data_WIND_DIRECT',
-            'jml_arr_WIND_DIRECT'
-        ));
-        // return view('pages.tele1.index')->with('nodes_tele_1', $results);
+        $tele = Node1::orderBy('id','desc')->limit(50)->get();
+        return view("pages.tele1.index1", compact('tele'));
     }
 
     public function cetak_pdf()
     {
-        $cetak_sensor = Tele1::all();
+        $cetak_sensor = Node1::all();
         $pdf = PDF::loadview('pages.tele1.cetak_pdf',['Tele1'=>$cetak_sensor]);
         return $pdf->download('report-tele1.pdf');
     }

@@ -189,24 +189,24 @@
                     @php
                     $no = 1
                     @endphp
-                    @for ($i = sizeof($data_CO)-1;$i>=0;$i--)
-                    <tr>
-                      <td>{{$no++}}</td>
-                      <td>{{$data_waktu[$i]['created_at']}}</td>
-                      <td>{{$data_CO[$i]['field1']}}</td>
-                      <td>{{$data_O3[$i]['field2']}}</td>
-                      <td>{{$data_H2S[$i]['field3']}}</td>
-                      <td>{{$data_DUST[$i]['field4']}}</td>
-                      <td>{{$data_NH3[$i]['field5']}}</td>
-                      <td>{{$data_NO2[$i]['field6']}}</td>
-                      <td>{{$data_TEMPERATURE[$i]['field1']}}</td>
-                      <td>{{$data_HUMIDITY[$i]['field2']}}</td>
-                      <td>{{$data_PRESSURE[$i]['field3']}}</td>
-                      <td>{{$data_RAIN[$i]['field4']}}</td>
-                      <td>{{$data_WIND_SPEED[$i]['field1']}}</td>
-                      <td>{{$data_WIND_DIRECT[$i]['field2']}}</td>
-                    </tr>
-                    @endfor
+                    @foreach($tele as $t)
+                      <tr>
+                        <td>{{$no++}}</td>
+                        <td>{{date('Y-m-d H:i:s', strtotime($t->waktu))}}</td>
+                        <td>{{$t->sensor_CO}}</td> 
+                        <td>{{$t->sensor_O3}}</td>
+                        <td>{{$t->sensor_H2S}}</td>
+                        <td>{{$t->sensor_DUST}}</td>
+                        <td>{{$t->sensor_NH3}}</td>
+                        <td>{{$t->sensor_NO2}}</td>
+                        <td>{{$t->sensor_TEMPERATURE}}</td>
+                        <td>{{$t->sensor_HUMIDITY}}</td>
+                        <td>{{$t->sensor_PRESSURE}}</td>
+                        <td>{{$t->sensor_RAIN}}</td>
+                        <td>{{$t->sensor_WIND_SPEED}}</td>
+                        <td>{{$t->sensor_WIND_DIRECT}}</td>
+                      </tr>
+                    @endforeach
                   </tbody>
                   <tfoot>
                     <tr>
@@ -232,167 +232,6 @@
           </div>
         </div>
 
-        <!-- Data Sensor Kualitas Udara -->
-        <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Data Sensor Kualitas Udara</h3>
-              </div>
-              <div class="card-body">
-                <!-- <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a> -->
-                </a>
-                <table id="kualitas" class="table table-bordered table-hover">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>WAKTU</th>
-                    <th>CO</th>
-                    <th>O3</th>
-                    <th>H2S</th>
-                    <th>DUST</th>
-                    <th>NH3</th>
-                    <th>NO2</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @php
-                  $no = 1
-                  @endphp
-                  @for ($i = sizeof($data_CO)-1;$i>=0;$i--)
-                  <tr>
-                    <td>{{$no++}}</td>
-                    <td>{{$data_waktu[$i]['created_at']}}</td>
-                    <td>{{$data_CO[$i]['field1']}}</td>
-                    <td>{{$data_O3[$i]['field2']}}</td>
-                    <td>{{$data_H2S[$i]['field3']}}</td>
-                    <td>{{$data_DUST[$i]['field4']}}</td>
-                    <td>{{$data_NH3[$i]['field5']}}</td>
-                    <td>{{$data_NO2[$i]['field6']}}</td>
-                  </tr>
-                  @endfor
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <th>#</th>
-                    <th>WAKTU</th>
-                    <th>CO</th>
-                    <th>O3</th>
-                    <th>H2S</th>
-                    <th>DUST</th>
-                    <th>NH3</th>
-                    <th>NO2</th>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-        </div>
-        </div>
-
-        <!-- Data Sensor Cuaca -->
-        <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Data Sensor Cuaca</h3>
-              </div>
-              <div class="card-body">
-                <!-- <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a> -->
-                </a>
-                <table id="cuaca" class="table table-bordered table-hover">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>DATE</th>
-                      <th>TEMP</th>
-                      <th>HUMID</th>
-                      <th>PRESSURE</th>
-                      <th>RAIN</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @php
-                    $no = 1
-                    @endphp
-                    @for ($i = sizeof($data_CO)-1;$i>=0;$i--)
-                    <tr>
-                      <td>{{$no++}}</td>
-                      <td>{{$data_waktu[$i]['created_at']}}</td>
-                      <td>{{$data_TEMPERATURE[$i]['field1']}}</td>
-                      <td>{{$data_HUMIDITY[$i]['field2']}}</td>
-                      <td>{{$data_PRESSURE[$i]['field3']}}</td>
-                      <td>{{$data_RAIN[$i]['field4']}}</td>
-                    </tr>
-                    @endfor
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <th>#</th>
-                      <th>DATE</th>
-                      <th>TEMP</th>
-                      <th>HUMID</th>
-                      <th>PRESSURE</th>
-                      <th>RAIN</th>
-                    </tr>
-                  </tfoot>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-
-        <!-- Data Sensor Angin -->
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Data Sensor Angin</h3>
-              </div>
-              <div class="card-body">
-                <!-- <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a> -->
-                <!-- <a href="#" class="ml-1 btn btn-primary"><i class="fas fa-plus"></i> -->
-                </a>
-                <table id="angin" class="table table-bordered table-hover">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>WAKTU</th>
-                      <th>WIND SPEED</th>
-                      <th>WIND DIRECT</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @php
-                    $no = 1
-                    @endphp
-                    @for ($i = sizeof($data_CO)-1;$i>=0;$i--)
-                    <tr>
-                      <td>{{$no++}}</td>
-                      <td>{{$data_waktu[$i]['created_at']}}</td>
-                      <td>{{$data_WIND_SPEED[$i]['field1']}}</td>
-                      <td>{{$data_WIND_DIRECT[$i]['field2']}}</td>
-                    </tr>
-                    @endfor
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <th>#</th>
-                      <th>WAKTU</th>
-                      <th>WIND SPEED</th>
-                      <th>WIND DIRECT</th>
-                    </tr>
-                  </tfoot>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
       </div>
       <!-- /.container-fluid -->
     </section>
