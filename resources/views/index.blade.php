@@ -94,7 +94,7 @@
               <li class="nav-item">
               </li>
               <li class="nav-item">
-                <a href="{{route('tele1')}}" class="nav-link active">
+                <a href="{{route('node1')}}" class="nav-link active">
                   <p>Device Telemetering 1</p>
                 </a>
               </li>
@@ -106,6 +106,21 @@
               <li class="nav-item">
                 <a href="#" class="nav-link active">
                   <p>Device Telemetering 3</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('tele1')}}" class="nav-link active">
+                  <p>History Data Telemetering 1</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <p>History Data Telemetering 2</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <p>History Data Telemetering 3</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -159,15 +174,14 @@
               <!-- /.card-header -->
               <div class="card-body container-fluid">
                 <div class="row">
-                  <a href= "{{route('quality')}}" class="btn col-12 col-sm-6 col-md-3 card-link active">
+                  <a href= "#" class="btn col-12 col-sm-6 col-md-3 card-link active">
                     <div class="info-box mb-3">
-                      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
                       <div class="info-box-content">
-                        <span class="info-box-text">Kualitas Udara</span>
+                        <span class="info-box-text"><b>Visualisasi Grafik Data Node 1</b></span>
                       </div>
                     </div>
                   </a>
-                  <a href="{{route('weather')}}" class="btn col-12 col-sm-6 col-md-3 card-link active">
+                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
                     <div class="info-box mb-3">
                       <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
                       <div class="info-box-content">
@@ -175,7 +189,7 @@
                       </div>
                     </div>
                   </a>
-                  <a href="{{route('wind')}}" class="btn col-12 col-sm-6 col-md-3 card-link active">
+                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
                     <div class="info-box mb-3">
                       <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
                       <div class="info-box-content">

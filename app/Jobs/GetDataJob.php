@@ -24,7 +24,7 @@ class GetDataJob extends Job
      */
     public function handle()
     {   
-        Log::info('running get data job');
+        Log::info('running get data job node 1');
         $this->getData();
     }
 
@@ -36,20 +36,7 @@ class GetDataJob extends Job
         $jml_waktu = sizeof($data_waktu)-1;
         $jml_arr_waktu = $data_waktu[$jml_waktu]['created_at'];
         $jml_arr_CO = $data_waktu[$jml_waktu]['field1'];
-        // dd($jml_waktu);?
-
-        // Sensor CO
-        // $CO = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/1.json?api_key=1S7HYWX3RR862Y0W');
-        // $json_CO = json_decode($CO, TRUE);
-        // $data_CO = ($json_CO['feeds']);
-        // $jml_CO = sizeof($data_CO);
-        // $jml_arr_CO = $data_CO[$jml_CO-1]['field1'];
-        // $conv_jml_data = (int)$jml_arr;
-        // dd($data_CO);
-        // $save_CO = new Tele1;
-        // $save_CO->sensor_CO = $jml_arr_CO;
-        // $save_CO->save();
-
+        
         // Sensor O3
         $O3 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/2.json?api_key=1S7HYWX3RR862Y0W');
         $json_O3 = json_decode($O3, TRUE);
@@ -123,8 +110,8 @@ class GetDataJob extends Job
 
         // Sensor PRESSURE
         $PRESSURE = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/3.json?api_key=KHDHDCSC9XKKXMFT');
-        $json_BME28O = json_decode($PRESSURE, TRUE);
-        $data_PRESSURE = ($json_BME28O['feeds']);
+        $json_PRESSURE = json_decode($PRESSURE, TRUE);
+        $data_PRESSURE = ($json_PRESSURE['feeds']);
         $jml_PRESSURE = sizeof($data_PRESSURE);
         $jml_arr_PRESSURE = $data_PRESSURE[$jml_PRESSURE-1]['field3'];
         // $save_PRESSURE = new Tele1;

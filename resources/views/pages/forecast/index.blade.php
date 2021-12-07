@@ -174,9 +174,10 @@
           </div>
         </div>
         <!-- Data Ramalan 8 Hari (per 3 jam) -->
-        <div class="info-box mb-3 col-12 col-sm-6 col-md-8">
+        <div class="col-lg-12">
           <center>
-            <div id="openweathermap-widget-1"></div>
+            <!-- <div id="openweathermap-widget-1"></div> -->
+            <a class="weatherwidget-io" href="https://forecast7.com/en/n7d97112d63/malang/" data-label_1="MALANG" data-label_2="RAMALAN CUACA" data-theme="original" >MALANG RAMALAN CUACA</a>
           </center>
         </div>
         <div class="info-box mb-3 col-12 col-sm-6 col-md-5">
@@ -277,4 +278,7 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(script, s);  
   })();
+</script>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
