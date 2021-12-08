@@ -10,8 +10,8 @@
 
         <div class="video-overlay header-text">
             <div class="caption">
-                <h6>Selamat datang di web monitoring telemetering Tirtarona</h6>
-                <h2>Wisata Perubahan Iklim <br> Tirtarona</h2>
+                <h6>Selamat datang di website monitoring</h6>
+                <h2>Telemetering Kualitas Udara dan Iklim <br> Tirtarona</h2>
                 <div class="main-button scroll-to-section">
                     <a href="#features">Monitoring</a>
                 </div>
@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
-                        <h2>Monitoring Telemetering</h2>
+                        <h2>Telemetering Kualitas Udara dan Iklim</h2>
                         <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves">
                         <p>Anda dapat melakukan monitoring telemetering secara realtime meliputi cuaca dan kualitas udara</p>
                         <br>
@@ -361,7 +361,11 @@
                                     <br>
                                     <li>
                                       <h6>Website URL</h6>
-                                      <span>www.meeting.edu</span>
+                                      <span>
+                                         <a target="_blank" href="https://tirtarona-ipal.com/">
+                                            tirtarona-ipal.com
+                                         </a>
+                                        </span>
                                     </li>
                                   </ul>
 
