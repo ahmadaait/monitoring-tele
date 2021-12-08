@@ -37,7 +37,7 @@ https://templatemo.com/tm-548-training-studio
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Made By Love <3
+                    <p>Made with Love <3
                     
                 </div>
             </div>

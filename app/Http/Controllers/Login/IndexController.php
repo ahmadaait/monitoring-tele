@@ -30,7 +30,7 @@ class IndexController extends Controller
             $request->session()->put('uid',$user->id);
             $request->session()->put('name',$user->user_name);
             
-            return redirect('/');
+            return redirect('admin');
         }
         else
         {

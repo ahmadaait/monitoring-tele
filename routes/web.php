@@ -23,7 +23,7 @@ Route::middleware(['auth'])->group(function(){
     // });
     
     // Landing Page
-    Route::get('/', 'Index\IndexController@index')->name('index');
+    Route::get('admin', 'Index\IndexController@index')->name('index');
 
     // Forecast
     Route::get('forecast', 'Forecast\IndexController@index')->name('forecast');
@@ -44,8 +44,8 @@ Route::middleware(['auth'])->group(function(){
     Route::get('tele3', 'Tele3History\IndexController@index')->name('tele3');
     Route::get('tele3/cetak_pdf', 'Tele3History\IndexController@cetak_pdf')->name('tele3.cetak_pdf');
     
-    // Klasifikasi
-    // Route::get('wind', 'Wind\IndexController@index')->name('wind');
+    // Visualisasi Grafik Data
+    // Route::get('visual1', 'Visual1\IndexController@index')->name('visual1');
     // Route::get('weather', 'Weather\IndexController@index')->name('weather');
     // Route::get('quality', 'Quality\IndexController@index')->name('quality');
     
@@ -59,7 +59,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('user/cetak_pdf', 'User\IndexController@cetak_pdf')->name('user.cetak_pdf');
 });
 
-Route::get('index', 'Client_side\IndexController@index')->name('index');
+Route::get('/', 'Client_side\IndexController@index')->name('index');
 Route::get('device1', 'Client_side\Device1Controller@index')->name('device1');
 Route::get('device2', 'Client_side\Device2Controller@index')->name('device2');
 Route::get('device3', 'Client_side\Device3Controller@index')->name('device3');

@@ -19,7 +19,7 @@ class IndexController extends Controller
         $username = $request->session()->get('username');
         $user = User::Count();
         $data = ['user'=>$user, 'username'=>$username];
-        return view('index')->with('data', $data);
+        return view('pages.admin.index')->with('data', $data);
         dd($data);
     }
 }

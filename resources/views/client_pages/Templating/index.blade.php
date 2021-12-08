@@ -2,36 +2,6 @@
 @section('content')
 @include('client_pages.Templating.header')
 
-<!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo" >TIRTARONA TELEMETERING</a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#features">Monitoring</a></li>
-                            <li class="scroll-to-section"><a href="#program">Program</a></li>
-                            <li class="scroll-to-section"><a href="#Kegiatan">Kegiatan</a></li>
-                            <li class="scroll-to-section"><a href="#penghargaan">Penghargaan</a></li>
-                            <li class="scroll-to-section"><a href="#contact-us">Contact</a></li> 
-                            <li class="main-button"><a href="#">Admin</a></li>
-                        </ul>        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
-
     <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
         <video autoplay muted loop id="bg-video">
@@ -71,7 +41,7 @@
                                   <!-- <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a> -->
                                   </a>
                                   <table id="kualitas" class="table table-bordered table-hover">
-                                  
+                                  <center><div id="openweathermap-widget-5"></div></center>
                                 </table>
                               </div>
                             </div>
@@ -90,7 +60,7 @@
                             <div class="right-content">
                                 <h4>Monitoring Device Telemetering 1</h4>
                                 <p>Anda dapat melakukan monitoring device telemetering 1 secara realtime silakan klik "Lihat Selengkapnya"</p>
-                                <a href="Device1.html" class="text-button">Lihat Selengkapnya</a>
+                                <a href="{{route('device1')}}" class="text-button">Lihat Selengkapnya</a>
                             </div>
                         </li>
                     </ul>
@@ -104,7 +74,7 @@
                             <div class="right-content">
                                 <h4>Monitoring Device Telemetering 2</h4>
                                 <p>Anda dapat melakukan monitoring device telemetering 2 secara realtime silakan klik "Lihat Selengkapnya"</p>
-                                <a href="Monitoring-Cuaca.html" class="text-button">Lihat Selengkapnya</a>
+                                <a href="{{route('device2')}}" class="text-button">Lihat Selengkapnya</a>
                             </div>
                         </li>
                     </ul>
@@ -118,7 +88,7 @@
                           <div class="right-content">
                               <h4>Monitoring Device Telemetering 3</h4>
                               <p>Anda dapat melakukan monitoring device telemetering 3 secara realtime silakan klik "Lihat Selengkapnya"</p>
-                              <a href="Monitoring-Cuaca.html" class="text-button">Lihat Selengkapnya</a>
+                              <a href="{{route('device3')}}" class="text-button">Lihat Selengkapnya</a>
                           </div>
                       </li>
                   </ul>
@@ -411,4 +381,22 @@
         </div>
     </section>
     <!-- ***** Contact Us Area Ends ***** -->
+
+<script>
+    window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+    window.myWidgetParam.push({
+        id: 5,cityid: '1636722',
+        appid: 'bcccbaa299b2e0df1fac63f71d3ccdd5',
+        units: 'metric',
+        containerid: 'openweathermap-widget-5',  
+    });  
+    (function() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.charset = "utf-8";
+        script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(script, s);  
+    })();
+</script>
 @endsection
