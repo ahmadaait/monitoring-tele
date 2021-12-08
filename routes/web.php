@@ -45,7 +45,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('tele3/cetak_pdf', 'Tele3History\IndexController@cetak_pdf')->name('tele3.cetak_pdf');
     
     // Visualisasi Grafik Data
-    // Route::get('visual1', 'Visual1\IndexController@index')->name('visual1');
+    Route::get('visual1', 'Visual1\IndexController@index')->name('visual1');
     // Route::get('weather', 'Weather\IndexController@index')->name('weather');
     // Route::get('quality', 'Quality\IndexController@index')->name('quality');
     

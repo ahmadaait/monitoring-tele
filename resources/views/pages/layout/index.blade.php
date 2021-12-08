@@ -100,28 +100,43 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="{{route('node2')}}" class="nav-link active">
                   <p>Device Telemetering 2</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="{{route('node3')}}" class="nav-link active">
                   <p>Device Telemetering 3</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('tele1')}}" class="nav-link active">
-                  <p>History Data Telemetering 1</p>
+                  <p>History Data Device 1</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('tele2')}}" class="nav-link active">
+                  <p>History Data Device 2</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('tele3')}}" class="nav-link active">
+                  <p>History Data Device 3</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('visual1')}}" class="nav-link active">
+                  <p>Visualisasi Data Device 1</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
-                  <p>History Data Telemetering 2</p>
+                  <p>Visualisasi Data Device 2</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
-                  <p>History Data Telemetering 3</p>
+                  <p>Visualisasi Data Device 2</p>
                 </a>
               </li>
               <li class="nav-item">
