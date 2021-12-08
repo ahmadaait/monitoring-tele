@@ -10,7 +10,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Monitoring Telemetering Device 1</h2>
-                        <img src="{{asset('client_side/assets/')}}//images/line-dec.png" alt="waves">
+                        <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves">
                         <p>Anda dapat melakukan monitoring telemetering device 1 untuk kualitas udara : CO3,</p>
                         <br>
                         <div class="container-fluid" >
@@ -21,6 +21,7 @@
                                     <h5 class="card-title">Kualitas Udara</h5>
                                   </div>
                                   <div class="card-body">
+                                    <img src="{{asset('client_side/assets/')}}/images/RealTele.jpeg" alt="waves">
                                     @foreach($node1 as $t)
                                     <ul>
                                         <li>Data pada sensor-sensor diambil pada </li> 
@@ -92,13 +93,9 @@
                                  </div>
                             </div>
                         </div>
-                        </div>
-                    
+                      </div>
                     </div>
                 </div>
-               
-                
-          
             </div>
         </div>
     </section>
