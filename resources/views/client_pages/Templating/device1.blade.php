@@ -18,7 +18,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Kualitas Udara</h5>
+                                    <h5 class="card-title">Data Sensor Kualitas Udara</h5>
                                   </div>
                                   <div class="card-body">
                                     <img src="{{asset('client_side/assets/')}}/images/RealTele.jpeg" alt="waves">
@@ -48,7 +48,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Kualitas Udara</h5>
+                                    <h5 class="card-title">Data Sensor Cuaca</h5>
                                   </div>
                                   <div class="card-body">
                                     @foreach($node1 as $t)
@@ -75,7 +75,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Kualitas Udara</h5>
+                                    <h5 class="card-title">Data Sensor Kecepatan dan Arah Angin</h5>
                                   </div>
                                   <div class="card-body">
                                     @foreach($node1 as $t)

@@ -5,12 +5,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-12">
-            <h1>Selamat Datang di Halaman Dashboard, Admin</h1>
-          </div>
-          <div class="col-sm-6">
-          </div>
+        <div class="card-header">
+          <h1>Selamat Datang di Halaman Dashboard, Admin</h1>
         </div>
       </div>
       <!-- /.container-fluid -->
@@ -34,85 +30,20 @@
                       </div>
                     </div>
                   </a>
-                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
+                  <a href= "#" class="btn col-12 col-sm-6 col-md-3 card-link active">
                     <div class="info-box mb-3">
-                      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
                       <div class="info-box-content">
-                        <span class="info-box-text">Cuaca</span>
+                        <span class="info-box-text"><b>Visualisasi Grafik Data Node 2</b></span>
                       </div>
                     </div>
                   </a>
-                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
+                  <a href= "#" class="btn col-12 col-sm-6 col-md-3 card-link active">
                     <div class="info-box mb-3">
-                      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
                       <div class="info-box-content">
-                        <span class="info-box-text">Keadaan Angin</span>
+                        <span class="info-box-text"><b>Visualisasi Grafik Data Node 3</b></span>
                       </div>
                     </div>
                   </a>
-                  <!-- <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
-                    <div class="info-box mb-3">
-                      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
-                      <div class="info-box-content">
-                        <span class="info-box-text">Sensor NH3</span>
-                        <span class="info-box-number"></span>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
-                    <div class="info-box mb-3">
-                      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
-                      <div class="info-box-content">
-                        <span class="info-box-text">Sensor NO2</span>
-                        <span class="info-box-number"></span>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
-                    <div class="info-box mb-3">
-                      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
-                      <div class="info-box-content">
-                        <span class="info-box-text">Sensor Dust</span>
-                        <span class="info-box-number"></span>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
-                    <div class="info-box mb-3">
-                      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
-                      <div class="info-box-content">
-                        <span class="info-box-text">Sensor DHT-22</span>
-                        <span class="info-box-number"></span>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
-                    <div class="info-box mb-3">
-                      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
-                      <div class="info-box-content">
-                        <span class="info-box-text">Sensor Rain Gauge</span>
-                        <span class="info-box-number"></span>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
-                    <div class="info-box mb-3">
-                      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
-                      <div class="info-box-content">
-                        <span class="info-box-text">Sensor Anemometer</span>
-                        <span class="info-box-number"></span>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="btn col-12 col-sm-6 col-md-3 card-link active">
-                    <div class="info-box mb-3">
-                      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user"></i></span>
-                      <div class="info-box-content">
-                        <span class="info-box-text">Sensor Wind Direction</span>
-                        <span class="info-box-number"></span>
-                      </div>
-                    </div>
-                  </a> -->
                 </div>
               </div>
               <!-- /.card-body -->
