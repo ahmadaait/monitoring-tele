@@ -136,7 +136,7 @@
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
-                  <p>Visualisasi Data Device 2</p>
+                  <p>Visualisasi Data Device 3</p>
                 </a>
               </li>
               <li class="nav-item">
