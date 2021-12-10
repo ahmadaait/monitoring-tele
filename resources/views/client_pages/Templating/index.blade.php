@@ -362,8 +362,8 @@
                                     <li>
                                       <h6>Website URL</h6>
                                       <span>
-                                         <a target="_blank" href="https://tirtarona-ipal.com/">
-                                            tirtarona-ipal.com
+                                         <a target="_blank" href="http://www.tirtarona.com/">
+                                            www.tirtarona.com
                                          </a>
                                         </span>
                                     </li>
