@@ -1,14 +1,14 @@
 <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="{{route('index')}}" class="logo">TIRTARONA</a>
+                        <a href="{{route('index')}}" class="logo" >Wisata Perubahan Iklim</a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
+                        <ul class="nav" >
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#features">Monitoring</a></li>
                             <li class="scroll-to-section"><a href="#program">Program</a></li>
