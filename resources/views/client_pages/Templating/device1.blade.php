@@ -19,7 +19,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Kualitas Udara</h5>
+                                    <h5 class="card-title">Data Kualitas Udara</h5>
                                   </div>
                                   <div class="card-body">
                                     @foreach($node1 as $t)
@@ -38,6 +38,10 @@
                                     </ul>
                                     @endforeach
                                 </div>
+                                <div class="main-button" text-align="center">
+                                    <a href="https://tirtarona-telemetering.com/kualitas1">Lihat Grafik</a>
+                                    <br> <br>
+                                </div>
                                  </div>
                             </div>
                         </div>
@@ -48,7 +52,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Kualitas Udara</h5>
+                                    <h5 class="card-title">Data Iklim</h5>
                                   </div>
                                   <div class="card-body">
                                     @foreach($node1 as $t)
@@ -65,6 +69,10 @@
                                     </ul>
                                     @endforeach
                                 </div>
+                                <div class="main-button" text-align="center">
+                                    <a href="https://tirtarona-telemetering.com/iklim1">Lihat Grafik</a>
+                                    <br> <br>
+                                </div>
                                  </div>
                             </div>
                         </div>
@@ -75,7 +83,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Kualitas Udara</h5>
+                                    <h5 class="card-title">Data Angin</h5>
                                   </div>
                                   <div class="card-body">
                                     @foreach($node1 as $t)
@@ -89,6 +97,10 @@
                                         <li>Sensor Arah Angin : {{$t->sensor_WIND_DIRECT}} &deg;</li>
                                     </ul>
                                     @endforeach
+                                </div>
+                                <div class="main-button" text-align="center">
+                                    <a href="https://tirtarona-telemetering.com/angin1">Lihat Grafik</a>
+                                    <br> <br>
                                 </div>
                                  </div>
                             </div>
