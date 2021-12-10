@@ -9,16 +9,16 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
-                        <h2>Monitoring Telemetering Device 2</h2>
+                        <h2> Telemetering Device 2</h2>
                         <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves">
-                        <p>Anda dapat melakukan monitoring telemetering device 2 untuk kualitas udara : CO3,</p>
+                        <p>Device 1 berada area titik 1</p>
                         <br>
                         <div class="container-fluid" >
                             <div class="row justify-content-center">
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Data Sensor Kualitas Udara</h5>
+                                    <h5 class="card-title">Kualitas Udara</h5>
                                   </div>
                                   <div class="card-body">
                                     <ul>
@@ -46,7 +46,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Data Sensor Cuaca</h5>
+                                    <h5 class="card-title">Kualitas Udara</h5>
                                   </div>
                                   <div class="card-body">
                                     <ul>
@@ -72,7 +72,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Data Sensor Kecepatan dan Arah Angin</h5>
+                                    <h5 class="card-title">Kualitas Udara</h5>
                                   </div>
                                   <div class="card-body">
                                     <ul>
