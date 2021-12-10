@@ -10,18 +10,18 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Telemetering Device 1</h2>
-                        <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves">
-                        <p>Anda dapat melakukan monitoring telemetering device 1 untuk kualitas udara : CO3,</p>
-                        <br>
+                        <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves" >
+                        <p>Device 1 berada area titik 1</p>
+                        <img src="{{asset('client_side/assets/')}}/images/RealTele.jpeg" width="400" height="500">
+
                         <div class="container-fluid" >
                             <div class="row justify-content-center">
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Data Sensor Kualitas Udara</h5>
+                                    <h5 class="card-title">Kualitas Udara</h5>
                                   </div>
                                   <div class="card-body">
-                                    <img src="{{asset('client_side/assets/')}}/images/RealTele.jpeg" alt="waves">
                                     @foreach($node1 as $t)
                                     <ul>
                                         <li>Data pada sensor-sensor diambil pada </li> 
@@ -48,7 +48,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Data Sensor Cuaca</h5>
+                                    <h5 class="card-title">Kualitas Udara</h5>
                                   </div>
                                   <div class="card-body">
                                     @foreach($node1 as $t)
@@ -75,7 +75,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Data Sensor Kecepatan dan Arah Angin</h5>
+                                    <h5 class="card-title">Kualitas Udara</h5>
                                   </div>
                                   <div class="card-body">
                                     @foreach($node1 as $t)
@@ -90,12 +90,16 @@
                                     </ul>
                                     @endforeach
                                 </div>
-                              </div>
+                                 </div>
                             </div>
                         </div>
-                      </div>
+                        </div>
+                    
                     </div>
                 </div>
+               
+                
+          
             </div>
         </div>
     </section>
