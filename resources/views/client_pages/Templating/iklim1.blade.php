@@ -11,7 +11,7 @@
                     <div class="section-heading">
                         <h2>Telemetering Device 1 - Iklim</h2>
                         <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves" >
-                        <p>Anda dapat melakukan telemetering iklim device 1 : Temperature,Humidity,Pressure,Rain</p>
+                        <p>Anda dapat melakukan telemetering iklim device 1 : Suhu, Kelembaban, Tekanan Udara, Curah Hujan</p>
                         <br>
                         <div class="container-fluid" >
                             <div class="row justify-content-center">
@@ -21,10 +21,8 @@
                                     <h5 class="card-title">Ramalan Cuacass</h5>
                                   </div>
                                   <div class="card-body">
-
-                                    <img src="assets/images/Thingspeak.png" alt="waves">
-
-                                </div>
+                                    <div id="openweathermap-widget-5"></div>
+                                  </div>
                                  </div>
                             </div>
                         </div>
@@ -35,22 +33,23 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Visual Sensor Temperature</h5>
+                                    <h5 class="card-title">Visual Sensor Suhu</h5>
                                   </div>
                                   <div class="card-body">
-
                                   <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549471/charts/1?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Temperature&type=line&update=15&yaxis=deg+C"></iframe>
                                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549471/widgets/382111"></iframe>
          
                                     
                                     <ul>
-                                        <li>Data Terakhir : </li>
+                                      @foreach($node1 as $t)
+                                        <li>Data diambil pada : {{date('Y-m-d H:i:s', strtotime($t->waktu))}}</li>
+                                        <li>Data Terakhir : {{$t->sensor_TEMPERATURE}} &deg;C</li>
+                                      @endforeach
                                     </ul>
-
+                                  </div>
                                 </div>
-                                 </div>
+                              </div>
                             </div>
-                        </div>
                         </div>
                         <br>
                         <div class="container-fluid" >
@@ -58,42 +57,18 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Visual Sensor Humidity</h5>
+                                    <h5 class="card-title">Visual Sensor Kelembaban</h5>
                                   </div>
                                   <div class="card-body">
-
-                                    <img src="assets/images/Thingspeak.png" alt="waves">
-
-                                    
+                                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549471/charts/2?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Humidity&type=line&update=15&yaxis=%25"></iframe>
                                     <ul>
-                                        <li>Data Terakhir : </li>
+                                      @foreach($node1 as $t)
+                                        <li>Data diambil pada : {{date('Y-m-d H:i:s', strtotime($t->waktu))}}</li>
+                                        <li>Data Terakhir : {{$t->sensor_HUMIDITY}} %</li>
+                                      @endforeach
                                     </ul>
-
-                                </div>
-                                 </div>
-                            </div>
-                        </div>
-                        </div>
-                        <br>
-
-                        <div class="container-fluid" >
-                            <div class="row justify-content-center">
-                              <div class="col-20">
-                                <div class="card">
-                                  <div class="card-header">
-                                    <h5 class="card-title">Visual Sensor Pressure</h5>
                                   </div>
-                                  <div class="card-body">
-
-                                    <img src="assets/images/Thingspeak.png" alt="waves">
-
-                                    
-                                    <ul>
-                                        <li>Data Terakhir : </li>
-                                    </ul>
-
                                 </div>
-                                 </div>
                             </div>
                         </div>
                         </div>
@@ -104,35 +79,65 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Visual Sensor Rain Drop</h5>
+                                    <h5 class="card-title">Visual Sensor Tekanan Udara</h5>
                                   </div>
                                   <div class="card-body">
-
-                                    <img src="assets/images/Thingspeak.png" alt="waves">
-
-                                    
+                                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549471/charts/3?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Pressure&type=line&update=15&yaxis=hPa"></iframe>
                                     <ul>
-                                        <li>Data Terakhir : </li>
+                                      @foreach($node1 as $t)
+                                        <li>Data diambil pada : {{date('Y-m-d H:i:s', strtotime($t->waktu))}}</li>
+                                        <li>Data Terakhir : {{$t->sensor_PRESSURE}} hPa</li>
+                                      @endforeach
                                     </ul>
-
+                                  </div>
                                 </div>
-                                 </div>
                             </div>
                         </div>
                         </div>
                         <br>
 
-                        
-                        
-                        
-                    
+                        <div class="container-fluid" >
+                            <div class="row justify-content-center">
+                              <div class="col-20">
+                                <div class="card">
+                                  <div class="card-header">
+                                    <h5 class="card-title">Visual Sensor Curah Hujan</h5>
+                                  </div>
+                                  <div class="card-body">
+                                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549471/charts/4?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Rainfall&type=line&update=15&yaxis=mm"></iframe>
+                                    <ul>
+                                      @foreach($node1 as $t)
+                                        <li>Data diambil pada : {{date('Y-m-d H:i:s', strtotime($t->waktu))}}</li>
+                                        <li>Data Terakhir : {{$t->sensor_RAIN}} mm(day)</li>
+                                      @endforeach
+                                    </ul>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <br>
                     </div>
                 </div>
-               
-                
-          
             </div>
         </div>
     </section>
-    <!-- ***** Features Item End ***** -->
+  <!-- ***** Features Item End ***** -->
+  <script>
+    window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+    window.myWidgetParam.push({
+        id: 5,cityid: '1636722',
+        appid: 'bcccbaa299b2e0df1fac63f71d3ccdd5',
+        units: 'metric',
+        containerid: 'openweathermap-widget-5',  
+    });  
+    (function() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.charset = "utf-8";
+        script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(script, s);  
+    })();
+</script>
 @endsection
