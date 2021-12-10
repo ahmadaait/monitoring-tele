@@ -18,14 +18,14 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Visual Sensor Arah angin</h5>
+                                    <h5 class="card-title">Visual Sensor Kecepatan Angin</h5>
                                   </div>
                                   <div class="card-body">
-                                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549471/charts/1?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Temperature&type=line&update=15&yaxis=deg+C"></iframe>
+                                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1548674/charts/1?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Wind+speed&type=line&update=15&yaxis=Km%2Fh"></iframe>
                                     <ul>
                                       @foreach($node1 as $t)
                                         <li>Data diambil pada : {{date('Y-m-d H:i:s', strtotime($t->waktu))}}</li>
-                                        <li>Data Terakhir : {{$t->sensor_TEMPERATURE}} &deg;C</li>
+                                        <li>Data Terakhir : {{$t->sensor_WIND_SPEED}} Km/h</li>
                                       @endforeach
                                     </ul>
                                   </div>
@@ -39,14 +39,14 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Visual Kecepatan Angin</h5>
+                                    <h5 class="card-title">Visual Arah Angin</h5>
                                   </div>
                                   <div class="card-body">
-                                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549471/charts/2?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Humidity&type=line&update=15&yaxis=%25"></iframe>
+                                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/apps/matlab_visualizations/436403"></iframe>
                                     <ul>
                                       @foreach($node1 as $t)
                                         <li>Data diambil pada : {{date('Y-m-d H:i:s', strtotime($t->waktu))}}</li>
-                                        <li>Data Terakhir : {{$t->sensor_HUMIDITY}} %</li>
+                                        <li>Data Terakhir : {{$t->sensor_WIND_DIRECT}} &deg;</li>
                                       @endforeach
                                     </ul>
                                   </div>

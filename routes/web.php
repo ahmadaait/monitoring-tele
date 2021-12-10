@@ -65,6 +65,7 @@ Route::get('device2', 'Client_side\Device2Controller@index')->name('device2');
 Route::get('device3', 'Client_side\Device3Controller@index')->name('device3');
 Route::get('monitoringCuaca', 'Client_side\MonitoringCuacaController@index')->name('monitoringCuaca');
 
-// Node 1 Visual Data Front end
+// Node 1 Visual Data Client Side
 Route::get('iklim1', 'Client_side\Iklim1Controller@index')->name('iklim1');
 Route::get('kualitas1', 'Client_side\Kualitas1Controller@index')->name('kualitas1');
+Route::get('angin1', 'Client_side\Angin1Controller@index')->name('angin1');
