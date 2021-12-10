@@ -30,7 +30,8 @@ class GetDataJob extends Job
 
     
     private function getData() {
-        $waktu = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/1.json?api_key=1S7HYWX3RR862Y0W');
+        // CO
+        $waktu = HTTP::GET('https://api.thingspeak.com/channels/1549480/fields/1.json');
         $json_waktu = json_decode($waktu, TRUE);
         $data_waktu = ($json_waktu['feeds']);
         $jml_waktu = sizeof($data_waktu)-1;
@@ -38,7 +39,7 @@ class GetDataJob extends Job
         $jml_arr_CO = $data_waktu[$jml_waktu]['field1'];
         
         // Sensor O3
-        $O3 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/2.json?api_key=1S7HYWX3RR862Y0W');
+        $O3 = HTTP::GET('https://api.thingspeak.com/channels/1549480/fields/2.json');
         $json_O3 = json_decode($O3, TRUE);
         $data_O3 = ($json_O3['feeds']);
         $jml_O3 = sizeof($data_O3);
@@ -48,7 +49,7 @@ class GetDataJob extends Job
         // $save_O3->save();
         
         // Sensor H2S
-        $H2S = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/3.json?api_key=1S7HYWX3RR862Y0W');
+        $H2S = HTTP::GET('https://api.thingspeak.com/channels/1549480/fields/3.json');
         $json_H2S = json_decode($H2S, TRUE);
         $data_H2S = ($json_H2S['feeds']);
         $jml_H2S = sizeof($data_H2S);
@@ -58,7 +59,7 @@ class GetDataJob extends Job
         // $save_H2S->save();
         
         // Sensor DUST
-        $DUST = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/4.json?api_key=1S7HYWX3RR862Y0W');
+        $DUST = HTTP::GET('https://api.thingspeak.com/channels/1549480/fields/4.json');
         $json_DUST = json_decode($DUST, TRUE);
         $data_DUST = ($json_DUST['feeds']);
         $jml_DUST = sizeof($data_DUST);
@@ -68,7 +69,7 @@ class GetDataJob extends Job
         // $save_DUST->save();
 
         // Sensor NH3
-        $NH3 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/5.json?api_key=1S7HYWX3RR862Y0W');
+        $NH3 = HTTP::GET('https://api.thingspeak.com/channels/1549480/fields/5.json');
         $json_NH3 = json_decode($NH3, TRUE);
         $data_NH3 = ($json_NH3['feeds']);
         $jml_NH3 = sizeof($data_NH3);
@@ -78,7 +79,7 @@ class GetDataJob extends Job
         // $save_NH3->save();
 
         // Sensor NO2
-        $NO2 = HTTP::GET('https://api.thingspeak.com/channels/1552290/fields/6.json?api_key=1S7HYWX3RR862Y0W');
+        $NO2 = HTTP::GET('https://api.thingspeak.com/channels/1549480/fields/6.json');
         $json_NO2 = json_decode($NO2, TRUE);
         $data_NO2 = ($json_NO2['feeds']);
         $jml_NO2 = sizeof($data_NO2);
@@ -89,7 +90,7 @@ class GetDataJob extends Job
 
         // ---------------> Cuaca
         // Sensor TEMPERATURE
-        $TEMPERATURE = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/1.json?api_key=KHDHDCSC9XKKXMFT');
+        $TEMPERATURE = HTTP::GET('https://api.thingspeak.com/channels/1549471/fields/1.json');
         $json_TEMPERATURE = json_decode($TEMPERATURE, TRUE);
         $data_TEMPERATURE = ($json_TEMPERATURE['feeds']);
         $jml_TEMPERATURE = sizeof($data_TEMPERATURE);
@@ -99,7 +100,7 @@ class GetDataJob extends Job
         // $save_TEMPERATURE->save();
 
         // Sensor HUMIDITY
-        $HUMIDITY = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/2.json?api_key=KHDHDCSC9XKKXMFT');
+        $HUMIDITY = HTTP::GET('https://api.thingspeak.com/channels/1549471/fields/2.json');
         $json_HUMIDITY = json_decode($HUMIDITY, TRUE);
         $data_HUMIDITY = ($json_HUMIDITY['feeds']);
         $jml_HUMIDITY = sizeof($data_HUMIDITY);
@@ -109,7 +110,7 @@ class GetDataJob extends Job
         // $save_HUMIDITY->save();
 
         // Sensor PRESSURE
-        $PRESSURE = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/3.json?api_key=KHDHDCSC9XKKXMFT');
+        $PRESSURE = HTTP::GET('https://api.thingspeak.com/channels/1549471/fields/3.json');
         $json_PRESSURE = json_decode($PRESSURE, TRUE);
         $data_PRESSURE = ($json_PRESSURE['feeds']);
         $jml_PRESSURE = sizeof($data_PRESSURE);
@@ -119,7 +120,7 @@ class GetDataJob extends Job
         // $save_PRESSURE->save();
 
         // Sensor RAIN
-        $RAIN = HTTP::GET('https://api.thingspeak.com/channels/1552257/fields/4.json?api_key=KHDHDCSC9XKKXMFT');
+        $RAIN = HTTP::GET('https://api.thingspeak.com/channels/1549471/fields/4.json');
         $json_RAIN = json_decode($RAIN, TRUE);
         $data_RAIN = ($json_RAIN['feeds']);
         $jml_RAIN = sizeof($data_RAIN);
@@ -130,7 +131,7 @@ class GetDataJob extends Job
 
         // ---------------> Angin
         // Sensor WIND SPEED
-        $WIND_SPEED = HTTP::GET('https://api.thingspeak.com/channels/1552255/fields/1.json?api_key=FM35EP4FE99QAXFT');
+        $WIND_SPEED = HTTP::GET('https://api.thingspeak.com/channels/1548674/fields/1.json');
         $json_WIND_SPEED = json_decode($WIND_SPEED, TRUE);
         $data_WIND_SPEED = ($json_WIND_SPEED['feeds']);
         $jml_WIND_SPEED = sizeof($data_WIND_SPEED);
@@ -140,7 +141,7 @@ class GetDataJob extends Job
         // $save_WIND_SPEED->save();
 
         // Sensor WIND DIRECT
-        $WIND_DIRECT = HTTP::GET('https://api.thingspeak.com/channels/1552255/fields/2.json?api_key=FM35EP4FE99QAXFT');
+        $WIND_DIRECT = HTTP::GET('https://api.thingspeak.com/channels/1548674/fields/2.json');
         $json_WIND_DIRECT = json_decode($WIND_DIRECT, TRUE);
         $data_WIND_DIRECT = ($json_WIND_DIRECT['feeds']);
         $jml_WIND_DIRECT = sizeof($data_WIND_DIRECT);
