@@ -10,10 +10,10 @@
 
         <div class="video-overlay header-text">
             <div class="caption">
-                <h6>Selamat datang di website monitoring</h6>
+                <h6>Selamat datang di website</h6>
                 <h2>Telemetering Kualitas Udara dan Iklim <br> Tirtarona</h2>
                 <div class="main-button scroll-to-section">
-                    <a href="#features">Monitoring</a>
+                    <a href="#features">Telemetering</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
                     <div class="section-heading">
                         <h2>Telemetering Kualitas Udara dan Iklim</h2>
                         <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves">
-                        <p>Anda dapat melakukan monitoring telemetering secara realtime meliputi cuaca dan kualitas udara</p>
+                        <p>Anda dapat melakukan telemetering secara realtime meliputi kualitas udara dan iklim</p>
                         <br>
                         <div class="container-fluid">
                           <div class="row">
@@ -58,8 +58,8 @@
                                 <img src="{{asset('client_side/assets/')}}/images/dashboard.png" alt="Monitoring Cuaca" style="width:120px;height:120px;">
                             </div>
                             <div class="right-content">
-                                <h4>Monitoring Device Telemetering 1</h4>
-                                <p>Anda dapat melakukan monitoring device telemetering 1 secara realtime silakan klik "Lihat Selengkapnya"</p>
+                                <h4>Telemetering Device 1</h4>
+                                <p>Anda dapat melakukan telemetering device 1 secara realtime silakan klik "Lihat Selengkapnya"</p>
                                 <a href="{{route('device1')}}" class="text-button">Lihat Selengkapnya</a>
                             </div>
                         </li>
@@ -72,8 +72,8 @@
                                 <img src="{{asset('client_side/assets/')}}/images/dashboard.png" alt="Monitoring Kualitas Udara" style="width:120px;height:120px;">
                             </div>
                             <div class="right-content">
-                                <h4>Monitoring Device Telemetering 2</h4>
-                                <p>Anda dapat melakukan monitoring device telemetering 2 secara realtime silakan klik "Lihat Selengkapnya"</p>
+                                <h4>Telemetering Device 2</h4>
+                                <p>Anda dapat melakukan telemetering device 2 secara realtime silakan klik "Lihat Selengkapnya"</p>
                                 <a href="{{route('device2')}}" class="text-button">Lihat Selengkapnya</a>
                             </div>
                         </li>
@@ -86,8 +86,8 @@
                               <img src="{{asset('client_side/assets/')}}/images/dashboard.png" alt="Monitoring Kualitas Udara" style="width:120px;height:120px;">
                           </div>
                           <div class="right-content">
-                              <h4>Monitoring Device Telemetering 3</h4>
-                              <p>Anda dapat melakukan monitoring device telemetering 3 secara realtime silakan klik "Lihat Selengkapnya"</p>
+                                <h4>Telemetering Device 3</h4>
+                                <p>Anda dapat melakukan telemetering device 3 secara realtime silakan klik "Lihat Selengkapnya"</p>
                               <a href="{{route('device3')}}" class="text-button">Lihat Selengkapnya</a>
                           </div>
                       </li>

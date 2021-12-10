@@ -10,8 +10,8 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="{{route('index')}}" class="active">Home</a></li>
-                            <!-- <li class="scroll-to-section"><a href="index.html#features">Monitoring</a></li> -->
-                            <!-- <li class="scroll-to-section"><a href="index.html#contact-us">Contact</a></li>  -->
+                            <li class="scroll-to-section"><a href="{{route('index')}}#features">Monitoring</a></li>
+                            <li class="scroll-to-section"><a href="{{route('index')}}#contact-us">Contact</a></li> 
                             <!-- <li class="main-button"><a href="#">Admin</a></li> -->
                         </ul>        
                         <a class='menu-trigger'>
