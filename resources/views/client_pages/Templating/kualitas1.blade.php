@@ -11,7 +11,7 @@
                     <div class="section-heading">
                         <h2>Telemetering Device 1 - Kualitas Udara</h2>
                         <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves" >
-                        <p>Anda dapat melakukan telemetering kualitas udara device 1 : Temperature,Humidity,Pressure,Rain</p>
+                        <p>Anda dapat melakukan telemetering kualitas udara device 1 : CO,O3,H2s,Dust,NH3,NO2</p>
                         <br>
                         <div class="container-fluid" >
                             <div class="row justify-content-center">
