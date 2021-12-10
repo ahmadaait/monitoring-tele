@@ -18,7 +18,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Ramalan Cuaca</h5>
+                                    <h5 class="card-title">Ramalan Cuacas</h5>
                                   </div>
                                   <div class="card-body">
 
