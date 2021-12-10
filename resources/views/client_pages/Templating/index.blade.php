@@ -59,7 +59,7 @@
                             </div>
                             <div class="right-content">
                                 <h4>Telemetering Device 1</h4>
-                                <p>Anda dapat melakukan monitoring device telemetering 1 secara realtime silakan klik "Lihat Selengkapnya"</p>
+                                <p>Anda dapat melakukan telemetering device 1 secara realtime silakan klik "Lihat Selengkapnya"</p>
                                 <a href="{{route('device1')}}" class="text-button">Lihat Selengkapnya</a>
                             </div>
                         </li>
@@ -72,8 +72,8 @@
                                 <img src="{{asset('client_side/assets/')}}/images/dashboard.png" alt="Monitoring Kualitas Udara" style="width:120px;height:120px;">
                             </div>
                             <div class="right-content">
-                                <h4>Monitoring Device Telemetering 2</h4>
-                                <p>Anda dapat melakukan monitoring device telemetering 2 secara realtime silakan klik "Lihat Selengkapnya"</p>
+                                <h4>Telemetering Device 2</h4>
+                                <p>Anda dapat melakukan telemetering device 2 secara realtime silakan klik "Lihat Selengkapnya"</p>
                                 <a href="{{route('device2')}}" class="text-button">Lihat Selengkapnya</a>
                             </div>
                         </li>
@@ -86,8 +86,8 @@
                               <img src="{{asset('client_side/assets/')}}/images/dashboard.png" alt="Monitoring Kualitas Udara" style="width:120px;height:120px;">
                           </div>
                           <div class="right-content">
-                              <h4>Monitoring Device Telemetering 3</h4>
-                              <p>Anda dapat melakukan monitoring device telemetering 3 secara realtime silakan klik "Lihat Selengkapnya"</p>
+                              <h4>Telemetering Device 3</h4>
+                              <p>Anda dapat melakukan telemetering device 3 secara realtime silakan klik "Lihat Selengkapnya"</p>
                               <a href="{{route('device3')}}" class="text-button">Lihat Selengkapnya</a>
                           </div>
                       </li>
