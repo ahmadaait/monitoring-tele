@@ -9,9 +9,9 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
-                        <h2>Monitoring Telemetering Device 3</h2>
+                        <h2>Telemetering Device 3</h2>
                         <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves">
-                        <p>Anda dapat melakukan monitoring telemetering device 3 untuk kualitas udara : CO3,</p>
+                        <p>Device 1 berada area titik 1</p>
                         <br>
                         <div class="container-fluid" >
                             <div class="row justify-content-center">
