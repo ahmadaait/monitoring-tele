@@ -19,48 +19,14 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <div class="info-box mb-3 col-12 col-sm-6 col-md-3">
-          <center>
-            <div id="openweathermap-widget-2"></div>
-          </center>
-        </div>
-        <!-- Data Ramalan per hari -->
-        <div class="info-box mb-3 col-12 col-sm-6 col-md-2">
-         <div class="info-box-content">
-            <center>
-              <span class="info-box-text">
-                @foreach($data_forecast_today as $item)
-                  Cuaca Hari ini : {{$item['main']}} <br><br>
-                @endforeach
-              </span>
-            </center>
+        <div class="body">
+          <div id="openweathermap-widget-2"></div>
+          <div class="card-body">
+            @foreach($data_forecast_today as $item)
+              Cuaca Hari ini : {{$item['main']}} <br><br>
+            @endforeach
           </div>
-        </div>
-        <!-- Data Ramalan 8 Hari (per 3 jam) -->
-        <div class="col-lg-12">
-          <center>
-            <!-- <div id="openweathermap-widget-1"></div> -->
-            <a class="weatherwidget-io" href="https://forecast7.com/en/n7d97112d63/malang/" data-label_1="MALANG" data-label_2="RAMALAN CUACA" data-theme="original" >MALANG RAMALAN CUACA</a>
-          </center>
-        </div>
-        <div class="info-box mb-3 col-12 col-sm-6 col-md-5">
-          <div class="info-box-content">
-            <!-- <center> -->
-              <span class="info-box-text">
-                @php
-                  $no = 1;
-                @endphp
-                @foreach($data_forecast as $item)
-                  {{$no++}}.
-                  @foreach($item['weather'] as $w)
-                    Cuaca : {{$w['main']}} ||
-                  @endforeach
-                    Datetime : {{$item['dt_txt']}} <br>
-                @endforeach
-              </span>
-              <span class="info-box-number"></span>
-            <!-- </center> -->
-          </div>
+          <div id="openweathermap-widget-1"></div>
         </div>
       </div>
       </div>
