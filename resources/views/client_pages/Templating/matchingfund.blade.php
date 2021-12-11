@@ -10,10 +10,11 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Tentang Matching Fund</h2>
-                        <img src="assets/images/line-dec.png" alt="waves">
+                        <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves">
                         <br>
                         
                         <body>
+                        <img src="{{asset('client_side/assets/')}}/images/Match.png" alt="waves" width="400" height="550">
                             <p style="text-align:justify">
                                 Pada tahun 2019, Kampung RW 07 Kelurahan Tlogomas memperoleh Penghargaan Proklim Utama terkait dengan keberadaan IPAL Komunal di RT 3 dan peran serta masyarakat dalam pengelolaan air limbah, pengelolaan sampah, konservasi air dan ketahanan pangan. Namun keberadaan infrastruktur dan peran serta masyarakat yang mendukung upaya adaptasi dan mitigasi perubahan iklim ini masih belum dilaksanakan seluruh RT di lingkup wilayah RW 7.
                             </p>
@@ -23,8 +24,7 @@
                             <p style="text-align:justify">
                                 Kualitas udara atau air quality merupakan kadar kandungan udara berdasarkan konsentrasi polutan di lokasi tertentu. Pada program monitoring ini yang diukur adalah kualitas udara ambien. Udara ambien adalah udara bebas di permukaan bumi pada lapisan troposfer (lapisan udara setebal 16 km dari permukaan bumi) yang berada di dalam wilayah yurisdiksi Republik Indonesia yang dibutuhkan dan mempengaruhi kesehatan manusia, mahluk hidup dan unsur lingkungan hidup lainnya. 
                             </p>
-                            <br>
-                            <img src="assets/images/TELE.png" alt="waves" width="400" height="500">
+                            <img src="{{asset('client_side/assets/')}}/images/MatchFund.png" alt="waves" width="400" height="550">
                             <br>
                             <p style="text-align:justify">
                                 Cuaca adalah nilai sesaat dari atmosfer, serta perubahannya dalam jangka pendek di suatu tempat tertentu di permukaan bumi. Sedangkan iklim adalah sintesis atau rata-rata perubahan unsur-unsur cuaca dalam jangka panjang di suatu tempat atau pada suatu wilayah.
@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
-                        <h2>Kegiatan Kami</h2>
+                        <h2>Kegiatan MBKM</h2>
                         <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="">
                     </div>
                 </div>
@@ -71,56 +71,34 @@
                 <section class='tabs-content'>
                   <article id='tabs-1'>
                     
-                    <img src="{{asset('client_side/assets/')}}/images/PWisma.jpeg" alt="Second Training">
-                    <h4>Dasa Wisma XI</h4>
-                    <p>Kegiatan untuk pembenahan admiistrasi dari sumber dana kas dawis dan kas PKK</p>
+                    <img src="{{asset('client_side/assets/')}}/images/Monitortele.png" alt="Second Training" width="550" height="300">
+                    <h4>Website Telemetering Kualitas Udara dan Iklim</h4>
+                    <p>Kegiatan ini berupa luaran website www.tirtarona-telemetering.com</p>
                     <br> <br>
-                    <img src="{{asset('client_side/assets/')}}/images/PGotongRoyong.jpeg" alt="Second Training">
-                    <h4>Gotong Royong</h4>
-                    <p>Kegiatan untuk membersihkan sekitar kampung Tirtarona</p>
+                    <img src="{{asset('client_side/assets/')}}/images/Monitoringipal.png" alt="Second Training" width="550" height="300">
+                    <h4>Website Telemetering Instalasi Pengolahan Air Limbah</h4>
+                    <p>Kegiatan ini berupa luaran website www.tirtarona-ipal.com</p>
                     <br> <br>
                     <img src="{{asset('client_side/assets/')}}/images/PMusholla.jpeg" alt="Second Training">
-                    <h4>Bersih-bersih Musholla</h4>
-                    <p>Kegiatan ini dilaksanakan untuk membersihkan dan merapikan barang-barang yang ada di musholla.</p>
+                    <h4>Blynk Telemetering Kualitas Udara dan Iklim</h4>
+                    <p>Kegiatan ini berupa luaran aplikasi blynk.iot yang dapat anda unduh dan gunakan dari PlayStore</p>
                     <br> <br>
 
                     <img src="{{asset('client_side/assets/')}}/images/PJalanRaya.jpeg" alt="Third Class">
-                    <h4>Perbaikan Jalan Raya</h4>
-                    <p>Kegiatan untuk memperbaiki jalan raya di sekitar kampung Tirtarona</p>
-                    <br><br>
-                    <img src="{{asset('client_side/assets/')}}/images/PMCK.jpeg" alt="Third Class">
-                    <h4>MCK</h4>
-                    <p>Kegiatan untuk membenahi dan memperbaiki fasilitas MCK</p>
-                   
-                    <br><br>
-                    
-                    <img src="{{asset('client_side/assets/')}}/images/PHUTRI.jpeg" alt="Fourth Training">
-                    <h4>Peringatan HUT RI</h4>
-                    <p>Kegiatan ini dilaksanakan pada pekan 17 Agustus tiap tahun untuk memperingati HUT RI dengan rangkaian acara upacara atau lomba-lomba</p>
-                    <br><br>
-                    <img src="{{asset('client_side/assets/')}}/images/PBiopori.png" alt="Fourth Training">
-                    <h4>Bipori</h4>
-                    <p>Kegiatan ini dilaksanakan untuk merawat atau pemasangan bipori dari sumber dana swadaya</p>
-                    <br><br>
-                    <img src="{{asset('client_side/assets/')}}/images/PCat.jpeg" alt="Fourth Training">
-                    <h4>Pengecatan</h4>
-                    <p>Kegiatan ini dilaksanakan untuk mengecat berem dari sumber dana swadaya</p>
+                    <h4>Blynk Telemetering Instalasi Pengolahan Air Limbah</h4>
+                    <p>Kegiatan ini berupa luaran aplikasi blynk.iot yang dapat anda unduh dan gunakan dari PlayStore</p>
                     <br><br>
 
                   </article>
 
                   <article id='tabs-2'>
                     <img src="{{asset('client_side/assets/')}}/images/PWisma.jpeg" alt="Second Training">
-                    <h4>Desa Wisma XI</h4>
-                    <p>Kegiatan untuk pembenahan admiistrasi dari sumber dana kas dawis dan kas PKK</p>
+                    <h4>Sistem IoT Telemetering Kualitas Udara dan Iklim </h4>
+                    <p>Kegiatan ini menunjang perangkat keras untuk terhubung ke internet sehingga dapat dibaca di website monitoring</p>
                     <br> <br>
                     <img src="{{asset('client_side/assets/')}}/images/PGotongRoyong.jpeg" alt="Second Training">
-                    <h4>Gotong Royong</h4>
-                    <p>Kegiatan untuk membersihkan sekitar kampung Tirtarona</p>
-                    <br> <br>
-                    <img src="{{asset('client_side/assets/')}}/images/PMusholla.jpeg" alt="Second Training">
-                    <h4>Bersih-bersih Musholla</h4>
-                    <p>Kegiatan ini dilaksanakan untuk membersihkan dan merapikan barang-barang yang ada di musholla.</p>
+                    <h4>Sistem IoT Telemetering Instalasi Pengolahan Air Limbah</h4>
+                    <p>Kegiatan ini menunjang perangkat keras untuk terhubung ke internet sehingga dapat dibaca di website monitoring</p>
                     <br> <br>
                   </article>
                   <article id='tabs-3'>

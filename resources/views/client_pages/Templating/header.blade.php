@@ -14,8 +14,8 @@
                             <li class="scroll-to-section"><a href="#program">Program</a></li>
                             <li class="scroll-to-section"><a href="#Kegiatan">Kegiatan</a></li>
                             <li class="scroll-to-section"><a href="#penghargaan">Penghargaan</a></li>
-                            <li class="scroll-to-section"><a href="#penghargaan">Matching Fund</a></li>
-                            <li class="scroll-to-section"><a href="#penghargaan">Tentang</a></li>
+                            <li class="scroll-to-section"><a href="/matchingfund">Matching Fund</a></li>
+                            <li class="scroll-to-section"><a href="/tentangTele">Tentang</a></li>
                             <li class="scroll-to-section"><a href="#contact-us">Contact</a></li> 
                             <!-- <li class="main-button"><a href="#">Admin</a></li> -->
                         </ul>        

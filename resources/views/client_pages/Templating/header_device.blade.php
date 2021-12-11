@@ -13,6 +13,7 @@
                             <li class="scroll-to-section"><a href="{{route('index')}}#features">Monitoring</a></li>
                             <li class="scroll-to-section"><a href="{{route('index')}}#contact-us">Contact</a></li> 
                             <!-- <li class="main-button"><a href="#">Admin</a></li> -->
+                            
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>

@@ -116,20 +116,53 @@
             <div class="col-lg-4">
               <div class="trainer-item">
                   <div class="image-thumb">
-                      <img src="{{asset('client_side/assets/')}}/images/PBanksampah.jpeg" alt="" >
+                      <img src="{{asset('client_side/assets/')}}/images/ArtikelHidro2.png" alt="" >
                   </div>
                   <div class="down-content">
-                      <span>Program PKK</span>
-                      <h4>Bank Sampah Tirtarona</h4>
-                      <p>Tirtarona memiki program PKK yang dimulai sejak awal januari tahun 2018, isi kegiatan program ini terkait pengelolaan bank sampah yang ada di Tirtarona dengan sumber dana dari PKK, program ini terus berlangsung hingga saat ini. 
-                      </p>
-                     
+                    <br>
+                      <h4>Program Hidroponik Warga</h4>
+                      <p>
+                      Hidroponik adalah budidaya pertanian tanpa menggunakan media tanah, sehingga hanya dijalankan dengan menggunakan air sebagai pengganti tanah. Pertanian dengan menggunakan sistem hidroponik tidak memerlukan lahan yang luas, dapat diberi nutrisi dengan mudah dan efisien, serta tidak menyebabkan polusi lingkungan.
+                    </p>
+                      <a href="https://tirtarona-telemetering.com/hidroponik" class="text-button">Lihat Selengkapnya</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="trainer-item">
+                  <div class="image-thumb">
+                      <img src="{{asset('client_side/assets/')}}/images/Biopori1.png" alt="" >
+                  </div>
+                  <div class="down-content">
+                    <br>
+                      <h4>Program Biopori</h4>
+                      <p>
+                      Beberapa warga RW 7 sudah memiliki biopori namun, diperlukan pengelolaan karena kinerja biopori yang sudah ada sering terhambat oleh adanya material seperti pasir yang tidak dapat dikeluarkan. Kerja sama antara ITN dengan RW 07 Kelurahan Tlogomas terkait biopori ini adalah membawa desain biopori yang baru supaya kinerja daya serap air permukaan ke dalam tanah lebih optimal dan efektif. Program pembuatan biopori dapat juga dimanfaatkan sebagai tempat rekreasi pembelajaran teknologi yang inovatif.
+                     </p>
+                      <a href="https://tirtarona-telemetering.com/biopori" class="text-button">Lihat Selengkapnya</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="trainer-item">
+                  <div class="image-thumb">
+                      <img src="{{asset('client_side/assets/')}}/images/Wirausaha1.jpeg" alt="" >
+                  </div>
+                  <div class="down-content">
+                    <br>
+                      <h4>Program Kewirausahaan</h4>
+                      <p>
+                      Kewirausahaan adalah konsep yang memiliki banyak definisi mulai dari definisi yang sempit seperti memulai bisnis sendiri sampai kepada konsep yang lebih luas yaitu sikap kerja yang menekankan kepada kepercayaan diri, inisiatif, inovatif, berani mengambil resiko. Selain itu, Kewirausahaan adalah satu atau lebih orang yang berani mengambil resiko ekonomi membuat organisasi baru, dan mengunakan teknologi baru atau teknologi inovatif untuk membuat nilai (Creating Value) bagi orang lain.                       </p>
+                      <a href="https://tirtarona-telemetering.com/kewirausahaan" class="text-button">Lihat Selengkapnya</a>
                   </div>
               </div>
           </div>
           
         
       </div>
+      
+
+
     </div>
     
 </div>

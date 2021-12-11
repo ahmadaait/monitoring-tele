@@ -10,7 +10,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Tentang Telemetering Kualitas Udara dan Iklim</h2>
-                        <img src="assets/images/line-dec.png" alt="waves">
+                        <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves">
                         <br>
                         
                         <body>
@@ -24,7 +24,7 @@
                                 Kualitas udara atau air quality merupakan kadar kandungan udara berdasarkan konsentrasi polutan di lokasi tertentu. Pada program monitoring ini yang diukur adalah kualitas udara ambien. Udara ambien adalah udara bebas di permukaan bumi pada lapisan troposfer (lapisan udara setebal 16 km dari permukaan bumi) yang berada di dalam wilayah yurisdiksi Republik Indonesia yang dibutuhkan dan mempengaruhi kesehatan manusia, mahluk hidup dan unsur lingkungan hidup lainnya. 
                             </p>
                             <br>
-                            <img src="assets/images/TELE.png" alt="waves" width="400" height="500">
+                            <img src="{{asset('client_side/assets/')}}/images/TELE.png" alt="waves" width="400" height="500">
                             <br>
                             <p style="text-align:justify">
                                 Cuaca adalah nilai sesaat dari atmosfer, serta perubahannya dalam jangka pendek di suatu tempat tertentu di permukaan bumi. Sedangkan iklim adalah sintesis atau rata-rata perubahan unsur-unsur cuaca dalam jangka panjang di suatu tempat atau pada suatu wilayah.
