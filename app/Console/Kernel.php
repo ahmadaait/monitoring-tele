@@ -66,7 +66,7 @@ class Kernel extends ConsoleKernel
             // Log::info("Run Copy");
             $newDataJob = new GetDataJob;
             $newDataJob->handle();
-        })->everySixHours()->timezone("Asia/Jakarta"); // CRON
+        })->everyThreeMinutes()->timezone("Asia/Jakarta"); // CRON
         
     // -----> Backup and Truncate
         $schedule->call(function(){
