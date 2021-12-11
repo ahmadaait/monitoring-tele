@@ -331,7 +331,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div id="map">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.7135459942965!2d112.59843431477906!3d-7.924958894291301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78821ef53d903d%3A0x43572b4c9c2aa5e7!2sJl.%20Tirta%20Rona%2C%20Tlogomas%2C%20Kec.%20Lowokwaru%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065144!5e0!3m2!1sen!2sid!4v1638600457368!5m2!1sen!2sid" width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.7135459942965!2d112.59843431477906!3d-7.924958894291301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78821ef53d903d%3A0x43572b4c9c2aa5e7!2sJl.%20Tirta%20Rona%2C%20Tlogomas%2C%20Kec.%20Lowokwaru%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065144!5e0!3m2!1sen!2sid!4v1638600457368!5m2!1sen!2sid" width="100%" height="900px" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12">
@@ -377,7 +377,26 @@
                         </div>
                         </div>
                     </div>
-                    
+                    <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="card">
+                              <div class="card-header">
+                                <h4 class="card-title">Support By</h4>
+                              </div>
+                              <div class="card-body">
+
+                                <img src="{{asset('client_side/assets/')}}/images/LogoMatch.png" alt="" width="600" height="450">
+
+
+                                <table id="kualitas" class="table table-bordered table-hover">
+                                
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
 
 
                 </div>
