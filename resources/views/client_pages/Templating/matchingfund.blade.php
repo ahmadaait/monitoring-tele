@@ -61,10 +61,10 @@
             <div class="row" id="tabs">
               <div class="col-lg-4">
                 <ul>
-                  <li><a href='#tabs-1'>Kegiatan Inti</a></li>
-                  <li><a href='#tabs-2'>Kegiatan Tiap Minggu</a></li>
-                  <li><a href='#tabs-3'>Kegiatan Tiap Bulan</a></li>
-                  <li><a href='#tabs-4'>Kegiatan Tiap Tahun</a></li>
+                  <li><a href='#tabs-1'>Prodi Teknik Informatika</a></li>
+                  <li><a href='#tabs-2'>Prodi Teknik Elektro</a></li>
+                  <li><a href='#tabs-3'>Prodi Teknik Lingkungan</a></li>
+                  <li><a href='#tabs-4'>prodi Teknik Kimia</a></li>
                 </ul>
               </div>
               <div class="col-lg-8">
