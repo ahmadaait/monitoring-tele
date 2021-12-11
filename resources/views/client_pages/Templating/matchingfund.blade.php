@@ -47,7 +47,9 @@
     </section>
     <!-- ***** Features Item End ***** -->
 
-    <!-- ***** Kegiatan ***** -->
+    <!--
+
+     ***** Kegiatan ***** 
     <section class="section" id="Kegiatan">
         <div class="container">
             <div class="row">
@@ -129,6 +131,8 @@
             </div>
         </div>
     </section>
-    <!-- ***** Our Classes End ***** -->
+    ***** Our Classes End ***** -->
+
+
 
     @endsection
