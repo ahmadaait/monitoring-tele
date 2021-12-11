@@ -69,3 +69,10 @@ Route::get('monitoringCuaca', 'Client_side\MonitoringCuacaController@index')->na
 Route::get('iklim1', 'Client_side\Iklim1Controller@index')->name('iklim1');
 Route::get('kualitas1', 'Client_side\Kualitas1Controller@index')->name('kualitas1');
 Route::get('angin1', 'Client_side\Angin1Controller@index')->name('angin1');
+
+// Ext
+Route::get('biopori', 'Client_side\BioporiController@index')->name('biopori');
+Route::get('hidroponik', 'Client_side\HidroponikController@index')->name('hidroponik');
+Route::get('kewirausahaan', 'Client_side\KewirausahaanController@index')->name('kewirausahaan');
+Route::get('matchingfund', 'Client_side\MatchingFundController@index')->name('matchingfund');
+Route::get('tentangTele', 'Client_side\TentangController@index')->name('tentangTele');
