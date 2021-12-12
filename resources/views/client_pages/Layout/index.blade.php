@@ -97,7 +97,7 @@ https://templatemo.com/tm-548-training-studio
                               </div>
                               <div class="card-body">
 
-                                <img src="{{asset('client_side/assets/')}}/images/LogoMatch.png" alt="" width="600" height="450">
+                                <img src="{{asset('client_side/assets/')}}/images/logomatch2.png" alt="" width="600" height="450">
 
 
                                 <table id="kualitas" class="table table-bordered table-hover">
