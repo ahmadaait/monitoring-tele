@@ -11,7 +11,7 @@
                     <div class="section-heading">
                         <h2> Telemetering Device 2</h2>
                         <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves">
-                        <p>Device 1 berada area titik 1</p>
+                        <p>Device 2 berada di lokasi sekitar jalan menuju Instalasi Pengolahan Air Limbah (IPAL). Berikut ini adalah cuplikan data dari sensor-sensor yang telah terpasang, klik "Lihat Grafik" untuk melihat detail grafik berdasarkan perubahan waktu</p>
                         <br>
                         <div class="container-fluid" >
                             <div class="row justify-content-center">

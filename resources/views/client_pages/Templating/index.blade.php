@@ -59,7 +59,7 @@
                             </div>
                             <div class="right-content">
                                 <h4>Telemetering Device 1</h4>
-                                <p>Anda dapat melakukan telemetering device 1 secara realtime silakan klik "Lihat Selengkapnya"</p>
+                                <p>Lokasi telemetering device 1 berada di daerah sekitar IPAL. Anda dapat melakukan telemetering device 1 secara realtime silakan klik "Lihat Selengkapnya"</p>
                                 <a href="{{route('device1')}}" class="text-button">Lihat Selengkapnya</a>
                             </div>
                         </li>
@@ -73,7 +73,7 @@
                             </div>
                             <div class="right-content">
                                 <h4>Telemetering Device 2</h4>
-                                <p>Anda dapat melakukan telemetering device 2 secara realtime silakan klik "Lihat Selengkapnya"</p>
+                                <p>Lokasi telemetering device 2 berada di daerah jalan menuju IPAL. Anda dapat melakukan telemetering device 2 secara realtime silakan klik "Lihat Selengkapnya"</p>
                                 <a href="{{route('device2')}}" class="text-button">Lihat Selengkapnya</a>
                             </div>
                         </li>
@@ -87,7 +87,7 @@
                           </div>
                           <div class="right-content">
                                 <h4>Telemetering Device 3</h4>
-                                <p>Anda dapat melakukan telemetering device 3 secara realtime silakan klik "Lihat Selengkapnya"</p>
+                                <p>Lokasi telemetering device 3 berada di dekat mushola. Anda dapat melakukan telemetering device 3 secara realtime silakan klik "Lihat Selengkapnya"</p>
                               <a href="{{route('device3')}}" class="text-button">Lihat Selengkapnya</a>
                           </div>
                       </li>
