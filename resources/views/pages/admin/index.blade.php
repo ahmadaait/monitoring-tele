@@ -23,7 +23,7 @@
               <!-- /.card-header -->
               <div class="card-body container-fluid">
                 <div class="row">
-                  <a href= "#" class="btn col-12 col-sm-6 col-md-3 card-link active">
+                  <a href= "{{route('visual1')}}" class="btn col-12 col-sm-6 col-md-3 card-link active">
                     <div class="info-box mb-3">
                       <div class="info-box-content">
                         <span class="info-box-text"><b>Visualisasi Grafik Data Node 1</b></span>
