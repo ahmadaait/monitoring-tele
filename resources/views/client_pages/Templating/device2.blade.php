@@ -27,7 +27,7 @@
                                     </ul>
                                     <br>
                                     <ul>
-                                        <li>CO:</li>
+                                        <li>CO2:</li>
                                         <li>O3:</li>
                                         <li>H2S:</li>
                                         <li>Dust:</li>

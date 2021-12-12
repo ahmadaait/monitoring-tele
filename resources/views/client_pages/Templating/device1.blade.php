@@ -29,7 +29,7 @@
                                     </ul>
                                     <br>
                                     <ul>
-                                        <li>Sensor CO : {{$t->sensor_CO}} ppm</li>
+                                        <li>Sensor CO2 : {{$t->sensor_CO}} ppm</li>
                                         <li>Sensor O3 : {{$t->sensor_O3}} ppb</li>
                                         <li>Sensor H2S : {{$t->sensor_H2S}} ppm</li>
                                         <li>Sensor Dust : {{$t->sensor_DUST}}</li>
