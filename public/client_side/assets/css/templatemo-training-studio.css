@@ -476,7 +476,9 @@ header
 }
 
 @media (max-width: 767px) {
+  
   .header-area .main-nav .logo {
+    font-size: 18px;
     color: #1e1e1e;
   }
   .header-area.header-sticky .nav li a:hover,
@@ -1502,7 +1504,7 @@ responsive
 @media (max-width: 992px) {
 
   .main-banner .caption h2 {
-    font-size: 64px;
+    font-size: 54px;
   }
   #features {
     margin-bottom: 110px;
@@ -1543,6 +1545,10 @@ responsive
   .feature-item .right-content a.text-button {
     margin-left: 130px;
   }
+  .main-banner .caption h2 {
+  font-size: 40px;
+
+}
 }
 @media (max-width: 450px) {
   .kontaks-item .right-content a.text-button {
