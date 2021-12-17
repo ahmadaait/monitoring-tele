@@ -46,8 +46,7 @@ Route::middleware(['auth'])->group(function(){
     
     // Visualisasi Grafik Data
     Route::get('visual1', 'Visual1\IndexController@index')->name('visual1');
-    // Route::get('weather', 'Weather\IndexController@index')->name('weather');
-    // Route::get('quality', 'Quality\IndexController@index')->name('quality');
+    Route::get('visual2', 'Visual2\IndexController@index')->name('visual2');
     
     // Admin CRUD
     Route::get('user', 'User\IndexController@index')->name('user');
@@ -69,6 +68,11 @@ Route::get('monitoringCuaca', 'Client_side\MonitoringCuacaController@index')->na
 Route::get('iklim1', 'Client_side\Iklim1Controller@index')->name('iklim1');
 Route::get('kualitas1', 'Client_side\Kualitas1Controller@index')->name('kualitas1');
 Route::get('angin1', 'Client_side\Angin1Controller@index')->name('angin1');
+
+// Node 2 Visual Data Client Side
+Route::get('iklim2', 'Client_side\Iklim2Controller@index')->name('iklim2');
+Route::get('kualitas2', 'Client_side\Kualitas2Controller@index')->name('kualitas2');
+Route::get('angin2', 'Client_side\Angin2Controller@index')->name('angin2');
 
 // Ext
 Route::get('biopori', 'Client_side\BioporiController@index')->name('biopori');

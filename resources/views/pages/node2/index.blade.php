@@ -1,5 +1,6 @@
 @extends('pages.layout.index')
 @section('content')
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -33,7 +34,7 @@
                     <tr>
                       <th>#</th>
                       <th>WAKTU</th>
-                      <th>CO</th>
+                      <th>CO2</th>
                       <th>O3</th>
                       <th>H2S</th>
                       <th>DUST</th>
@@ -74,7 +75,7 @@
                     <tr>
                       <th>#</th>
                       <th>WAKTU</th>
-                      <th>CO</th>
+                      <th>CO2</th>
                       <th>O3</th>
                       <th>H2S</th>
                       <th>DUST</th>
@@ -99,6 +100,22 @@
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
+<!-- <script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#keseluruhan').DataTable({
+        "paging": true,
+        "pageLength": 10,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script> -->
 @endsection

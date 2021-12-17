@@ -97,14 +97,14 @@
                                         <li>Arah Angin : {{$t->sensor_WIND_DIRECT}} &deg;</li>
                                     </ul>
                                     @endforeach
-                                </div>
-                                <div class="main-button" text-align="center">
-                                    <a href="https://tirtarona-telemetering.com/angin1">Lihat Grafik</a>
-                                    <br> <br>
-                                </div>
-                                 </div>
-                            </div>
-                        </div>
+                                  </div>
+                                  <div class="main-button" text-align="center">
+                                      <a href="https://tirtarona-telemetering.com/angin1">Lihat Grafik</a>
+                                      <br> <br>
+                                  </div>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
                     </div>
                 </div>

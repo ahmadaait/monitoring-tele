@@ -130,7 +130,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="{{route('visual2')}}" class="nav-link active">
                   <p>Visualisasi Data Device 2</p>
                 </a>
               </li>
