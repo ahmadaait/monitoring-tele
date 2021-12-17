@@ -18,7 +18,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Visual Sensor Kecepatan Angin</h5>
+                                    <h5 class="card-title">Visual Kecepatan Angin</h5>
                                   </div>
                                   <div class="card-body">
                                     <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1548674/charts/1?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Wind+speed&type=line&update=15&yaxis=Km%2Fh"></iframe>
