@@ -19,7 +19,7 @@
         <div class="card-body">
           <h3>Telemetering Kualitas Udara</h3>
           <div class="card-body">
-            <h4>Sensor CO</h4>
+            <h4>Sensor CO2</h4>
             <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549480/charts/1?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=CO&type=line&update=15&yaxis=ppm"></iframe>
             <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549480/widgets/382342"></iframe>
           </div>

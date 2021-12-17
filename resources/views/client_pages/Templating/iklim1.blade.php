@@ -33,7 +33,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Visual Sensor Suhu</h5>
+                                    <h5 class="card-title">Visual Suhu</h5>
                                   </div>
                                   <div class="card-body">
                                     <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549471/charts/1?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Temperature&type=line&update=15&yaxis=deg+C"></iframe>
@@ -54,7 +54,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Visual Sensor Kelembaban</h5>
+                                    <h5 class="card-title">Visual Kelembapan</h5>
                                   </div>
                                   <div class="card-body">
                                     <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549471/charts/2?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Humidity&type=line&update=15&yaxis=%25"></iframe>
@@ -76,7 +76,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Visual Sensor Tekanan Udara</h5>
+                                    <h5 class="card-title">Visual Tekanan Udara</h5>
                                   </div>
                                   <div class="card-body">
                                     <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549471/charts/3?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Pressure&type=line&update=15&yaxis=hPa"></iframe>
@@ -98,7 +98,7 @@
                               <div class="col-20">
                                 <div class="card">
                                   <div class="card-header">
-                                    <h5 class="card-title">Visual Sensor Curah Hujan</h5>
+                                    <h5 class="card-title">Visual Curah Hujan</h5>
                                   </div>
                                   <div class="card-body">
                                     <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549471/charts/4?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Rainfall&type=line&update=15&yaxis=mm"></iframe>

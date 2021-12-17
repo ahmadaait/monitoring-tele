@@ -34,7 +34,7 @@
                     <tr>
                       <th>#</th>
                       <th>WAKTU</th>
-                      <th>CO</th>
+                      <th>CO2</th>
                       <th>O3</th>
                       <th>H2S</th>
                       <th>DUST</th>
@@ -75,7 +75,7 @@
                     <tr>
                       <th>#</th>
                       <th>WAKTU</th>
-                      <th>CO</th>
+                      <th>CO2</th>
                       <th>O3</th>
                       <th>H2S</th>
                       <th>DUST</th>

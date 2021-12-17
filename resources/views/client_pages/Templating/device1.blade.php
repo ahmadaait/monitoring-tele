@@ -29,12 +29,12 @@
                                     </ul>
                                     <br>
                                     <ul>
-                                        <li>Sensor CO2 : {{$t->sensor_CO}} ppm</li>
-                                        <li>Sensor O3 : {{$t->sensor_O3}} ppb</li>
-                                        <li>Sensor H2S : {{$t->sensor_H2S}} ppm</li>
-                                        <li>Sensor Dust : {{$t->sensor_DUST}}</li>
-                                        <li>Sensor NH3 : {{$t->sensor_NH3}} pm</li>
-                                        <li>Sensor NO2 : {{$t->sensor_NO2}} ppm</li>
+                                        <li>CO<sub>2</sub> : {{$t->sensor_CO}} ppm</li>
+                                        <li>O<sub>3</sub> : {{$t->sensor_O3}} ppb</li>
+                                        <li>H<sub>2</sub>S : {{$t->sensor_H2S}} ppm</li>
+                                        <li>Debu : {{$t->sensor_DUST}} mg/m<sup>3</sup></li>
+                                        <li>NH<sub>3</sub> : {{$t->sensor_NH3}} pm</li>
+                                        <li>NO<sub>2</sub> : {{$t->sensor_NO2}} ppm</li>
                                     </ul>
                                     @endforeach
                                 </div>
@@ -62,10 +62,10 @@
                                     </ul>
                                     <br>
                                     <ul>
-                                        <li>Sensor Suhu : {{$t->sensor_TEMPERATURE}} &deg;C</li>
-                                        <li>Sensor Kelembaban : {{$t->sensor_HUMIDITY}} %</li>
-                                        <li>Sensor Tekanan Udara : {{$t->sensor_PRESSURE}} hPa</li>
-                                        <li>Sensor Hujan : {{$t->sensor_RAIN}} mm(day)</li>
+                                        <li>Suhu : {{$t->sensor_TEMPERATURE}} &deg;C</li>
+                                        <li>Kelembaban : {{$t->sensor_HUMIDITY}} %</li>
+                                        <li>Tekanan Udara : {{$t->sensor_PRESSURE}} hPa</li>
+                                        <li>Hujan : {{$t->sensor_RAIN}} mm(day)</li>
                                     </ul>
                                     @endforeach
                                 </div>
@@ -93,8 +93,8 @@
                                     </ul>
                                     <br>
                                     <ul>
-                                        <li>Sensor Kecepatan Angin : {{$t->sensor_WIND_SPEED}} Km/h</li>
-                                        <li>Sensor Arah Angin : {{$t->sensor_WIND_DIRECT}} &deg;</li>
+                                        <li>Kecepatan Angin : {{$t->sensor_WIND_SPEED}} Km/h</li>
+                                        <li>Arah Angin : {{$t->sensor_WIND_DIRECT}} &deg;</li>
                                     </ul>
                                     @endforeach
                                 </div>

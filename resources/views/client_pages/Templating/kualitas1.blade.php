@@ -11,14 +11,14 @@
                     <div class="section-heading">
                         <h2>Telemetering Device 1 - Kualitas Udara</h2>
                         <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves" >
-                        <p>Anda dapat melakukan telemetering kualitas udara device 1 : CO2, O3, H2S, Debu, NH3, NO2</p>
+                        <p>Anda dapat melakukan telemetering kualitas udara device 1 : CO<sub>2</sub>, O<sub>3</sub>, H<sub>2</sub>S, Debu, NH<sub>3</sub>, NO<sub>2</sub></p>
                         <br>
                         <div class="container-fluid" >
                           <div class="row justify-content-center">
                             <div class="col-20">
                               <div class="card">
                                 <div class="card-header">
-                                  <h5 class="card-title">Visual Sensor CO2</h5>
+                                  <h5 class="card-title">Visual CO<sub>2</sub></h5>
                                 </div>
                                 <div class="card-body">
                                   <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549480/charts/1?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=CO&type=line&update=15&yaxis=ppm"></iframe>
@@ -39,7 +39,7 @@
                             <div class="col-20">
                               <div class="card">
                                 <div class="card-header">
-                                  <h5 class="card-title">Visual Sensor O3</h5>
+                                  <h5 class="card-title">Visual O<sub>3</sub></h5>
                                 </div>
                                 <div class="card-body">
                                   <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549480/charts/2?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=O3&type=line&update=15&yaxis=ppb"></iframe>
@@ -60,7 +60,7 @@
                             <div class="col-20">
                               <div class="card">
                                 <div class="card-header">
-                                  <h5 class="card-title">Visual Sensor H2S</h5>
+                                  <h5 class="card-title">Visual H<sub>2</sub>S</h5>
                                 </div>
                                 <div class="card-body">
                                   <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549480/charts/3?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=H2S&type=line&update=15&yaxis=ppm"></iframe>
@@ -81,14 +81,14 @@
                             <div class="col-20">
                               <div class="card">
                                 <div class="card-header">
-                                  <h5 class="card-title">Visual Sensor Debu</h5>
+                                  <h5 class="card-title">Visual Debu</h5>
                                 </div>
                                 <div class="card-body">
                                   <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549480/charts/4?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Dust+Density&type=line&update=15&yaxis=mg%2Fm3"></iframe>
                                   <ul>
                                     @foreach($node1 as $t)
                                       <li>Data diambil pada : {{date('Y-m-d H:i:s', strtotime($t->waktu))}}</li>
-                                      <li>Data Terakhir : {{$t->sensor_DUST}} mg/m3</li>
+                                      <li>Data Terakhir : {{$t->sensor_DUST}} mg/m<sup>3</sup></li>
                                     @endforeach
                                   </ul>
                                 </div>
@@ -102,7 +102,7 @@
                             <div class="col-20">
                               <div class="card">
                                 <div class="card-header">
-                                  <h5 class="card-title">Visual Sensor NH3</h5>
+                                  <h5 class="card-title">Visual NH<sub>3</sub></h5>
                                 </div>
                                 <div class="card-body">
                                   <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549480/charts/5?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=NH3&type=line&update=15&yaxis=ppm"></iframe>
@@ -123,7 +123,7 @@
                             <div class="col-20">
                               <div class="card">
                                 <div class="card-header">
-                                  <h5 class="card-title">Visual Sensor NO2</h5>
+                                  <h5 class="card-title">Visual Sensor NO<sub>2</sub></h5>
                                 </div>
                                 <div class="card-body">
                                   <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1549480/charts/6?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=NO2&type=line&update=15&yaxis=ppm"></iframe>
