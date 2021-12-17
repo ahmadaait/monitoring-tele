@@ -1,5 +1,6 @@
 @extends('pages.layout.index')
 @section('content')
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -7,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-12">
-            <h1>Data Sensor Keseluruhan Device Telemetering 1</h1>
+            <h1>Data Sensor Keseluruhan Device Telemetering 2</h1>
           </div>
         </div>
       </div>
@@ -33,7 +34,7 @@
                     <tr>
                       <th>#</th>
                       <th>WAKTU</th>
-                      <th>CO</th>
+                      <th>CO2</th>
                       <th>O3</th>
                       <th>H2S</th>
                       <th>DUST</th>
@@ -74,7 +75,7 @@
                     <tr>
                       <th>#</th>
                       <th>WAKTU</th>
-                      <th>CO</th>
+                      <th>CO2</th>
                       <th>O3</th>
                       <th>H2S</th>
                       <th>DUST</th>

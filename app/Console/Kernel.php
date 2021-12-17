@@ -97,37 +97,37 @@ class Kernel extends ConsoleKernel
 
 // Node 2
     // -----> Insert Data
-        // $schedule->call(function(){
-        //     // Log::info("Run Copy");
-        //     $newDataJob = new GetDataJob2;
-        //     $newDataJob->handle();
-        // })->everyMinute()->timezone("Asia/Jakarta"); // CRON
+        $schedule->call(function(){
+            // Log::info("Run Copy");
+            $newDataJob = new GetDataJob2;
+            $newDataJob->handle();
+        })->everySixHours()->timezone("Asia/Jakarta"); // CRON
 
     // -----> Backup and Truncate
-        // $schedule->call(function(){
-        //     // Log::info("Run Copy");
-        //     // $newDataJob = new GetDataJob;
-        //     // $newDataJob->handle();
-        //     $history2 = Node2::all();
-        //     foreach ($history2 as $data) {
-        //         $save_history = new Tele2History;
-        //         $save_history->waktu = date('Y-m-d H:i:s', strtotime($data->waktu));
-        //         $save_history->sensor_CO = $data->sensor_CO;
-        //         $save_history->sensor_O3 = $data->sensor_O3;
-        //         $save_history->sensor_H2S = $data->sensor_H2S;
-        //         $save_history->sensor_DUST = $data->sensor_DUST;
-        //         $save_history->sensor_NH3 = $data->sensor_NH3;
-        //         $save_history->sensor_NO2 = $data->sensor_NO2;
-        //         $save_history->sensor_TEMPERATURE = $data->sensor_TEMPERATURE;
-        //         $save_history->sensor_HUMIDITY = $data->sensor_HUMIDITY;
-        //         $save_history->sensor_PRESSURE = $data->sensor_PRESSURE;
-        //         $save_history->sensor_RAIN = $data->sensor_RAIN;
-        //         $save_history->sensor_WIND_SPEED = $data->sensor_WIND_SPEED;
-        //         $save_history->sensor_WIND_DIRECT = $data->sensor_WIND_DIRECT;
-        //         $save_history->save();
-        //     }
-        //     Node2::query()->truncate();
-        // })->monthly()->timezone("Asia/Jakarta"); // CRON
+        $schedule->call(function(){
+            // Log::info("Run Copy");
+            // $newDataJob = new GetDataJob;
+            // $newDataJob->handle();
+            $history2 = Node2::all();
+            foreach ($history2 as $data) {
+                $save_history = new Tele2History;
+                $save_history->waktu = date('Y-m-d H:i:s', strtotime($data->waktu));
+                $save_history->sensor_CO = $data->sensor_CO;
+                $save_history->sensor_O3 = $data->sensor_O3;
+                $save_history->sensor_H2S = $data->sensor_H2S;
+                $save_history->sensor_DUST = $data->sensor_DUST;
+                $save_history->sensor_NH3 = $data->sensor_NH3;
+                $save_history->sensor_NO2 = $data->sensor_NO2;
+                $save_history->sensor_TEMPERATURE = $data->sensor_TEMPERATURE;
+                $save_history->sensor_HUMIDITY = $data->sensor_HUMIDITY;
+                $save_history->sensor_PRESSURE = $data->sensor_PRESSURE;
+                $save_history->sensor_RAIN = $data->sensor_RAIN;
+                $save_history->sensor_WIND_SPEED = $data->sensor_WIND_SPEED;
+                $save_history->sensor_WIND_DIRECT = $data->sensor_WIND_DIRECT;
+                $save_history->save();
+            }
+            Node2::query()->truncate();
+        })->monthly()->timezone("Asia/Jakarta"); // CRON
 
 
 // Node 3
