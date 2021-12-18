@@ -120,18 +120,18 @@ class GetDataJob extends Job
 
         $save_sensor = new Node1;
         $save_sensor->waktu = date('Y-m-d H:i:s', strtotime($jml_arr_waktu));
-        $save_sensor->sensor_CO = $jml_arr_CO;
-        $save_sensor->sensor_O3 = $jml_arr_O3;
-        $save_sensor->sensor_H2S = $jml_arr_H2S;
-        $save_sensor->sensor_DUST = $jml_arr_DUST;
-        $save_sensor->sensor_NH3 = $jml_arr_NH3;
-        $save_sensor->sensor_NO2 = $jml_arr_NO2;
-        $save_sensor->sensor_TEMPERATURE = $jml_arr_TEMPERATURE;
-        $save_sensor->sensor_HUMIDITY = $jml_arr_HUMIDITY;
-        $save_sensor->sensor_PRESSURE = $jml_arr_PRESSURE;
-        $save_sensor->sensor_RAIN = $jml_arr_RAIN;
-        $save_sensor->sensor_WIND_SPEED = $jml_arr_WIND_SPEED;
-        $save_sensor->sensor_WIND_DIRECT = $jml_arr_WIND_DIRECT;
+        $save_sensor->sensor_CO = floatval($jml_arr_CO);
+        $save_sensor->sensor_O3 = floatval($jml_arr_O3);
+        $save_sensor->sensor_H2S = floatval($jml_arr_H2S);
+        $save_sensor->sensor_DUST = floatval($jml_arr_DUST);
+        $save_sensor->sensor_NH3 = floatval($jml_arr_NH3);
+        $save_sensor->sensor_NO2 = floatval($jml_arr_NO2);
+        $save_sensor->sensor_TEMPERATURE = floatval($jml_arr_TEMPERATURE);
+        $save_sensor->sensor_HUMIDITY = floatval($jml_arr_HUMIDITY);
+        $save_sensor->sensor_PRESSURE = floatval($jml_arr_PRESSURE);
+        $save_sensor->sensor_RAIN = floatval($jml_arr_RAIN);
+        $save_sensor->sensor_WIND_SPEED = floatval($jml_arr_WIND_SPEED);
+        $save_sensor->sensor_WIND_DIRECT = floatval($jml_arr_WIND_DIRECT);
         $save_sensor->save();
     }
 }

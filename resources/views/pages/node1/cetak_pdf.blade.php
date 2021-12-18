@@ -19,7 +19,7 @@
             <tr>
                 <th>#</th>
                 <th>WAKTU</th>
-                <th>CO2</th>
+                <th>CO</th>
                 <th>O3</th>
                 <th>H2S</th>
                 <th>DUST</th>

@@ -18,7 +18,7 @@
                             <div class="col-20">
                               <div class="card">
                                 <div class="card-header">
-                                  <h5 class="card-title">Visual CO<sub>2</sub></h5>
+                                  <h5 class="card-title">Visual CO</h5>
                                 </div>
                                 <div class="card-body">
                                   <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1552131/charts/1?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=CO&type=line&update=15&yaxis=ppm"></iframe>

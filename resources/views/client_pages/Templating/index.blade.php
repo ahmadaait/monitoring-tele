@@ -79,7 +79,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                   <ul class="features-items">
                       <li class="feature-item">
                           <div class="left-icon">
@@ -92,7 +92,7 @@
                           </div>
                       </li>
                   </ul>
-              </div>
+              </div> -->
           
             </div>
         </div>
