@@ -12,6 +12,7 @@
                         <h2>Telemetering Device 3</h2>
                         <img src="{{asset('client_side/assets/')}}/images/line-dec.png" alt="waves">
                         <p>Device 3 berada di lokasi dekat mushola. Berikut ini adalah cuplikan data dari sensor-sensor yang telah terpasang, klik "Lihat Grafik" untuk melihat detail grafik berdasarkan perubahan waktu</p>
+                        <img src="{{asset('client_side/assets/')}}/images/TELE3.jpg" width="400" height="500">
                         <br>
                         <div class="container-fluid" >
                             <div class="row justify-content-center">
@@ -27,7 +28,7 @@
                                     </ul>
                                     <br>
                                     <ul>
-                                        <li>CO2:</li>
+                                        <li>CO:</li>
                                         <li>O3:</li>
                                         <li>H2S:</li>
                                         <li>Dust:</li>

@@ -23,7 +23,6 @@
                                   </div>
                                   <div class="card-body">
                                     @foreach($node1 as $t)
-                                    <ul>
                                         <li>Data pada sensor-sensor diambil pada </li> 
                                         <li>{{date('Y-m-d H:i:s', strtotime($t->waktu))}}</li>
                                     </ul>
