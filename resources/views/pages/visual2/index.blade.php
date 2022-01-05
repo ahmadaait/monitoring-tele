@@ -85,7 +85,7 @@
             <h4>Sensor Arah Angin</h4>
             <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1552083/charts/2?bgcolor=%23ffffff&color=%230000FF&dynamic=true&results=60&title=Wind+direction&type=line&update=15&yaxis=deg"></iframe>
             <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1552083/widgets/382796"></iframe>
-            <!-- <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/apps/matlab_visualizations/436403"></iframe> -->
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/apps/matlab_visualizations/442441"></iframe>
           </div>
         </div>
       </div>
