@@ -42,7 +42,7 @@
                                     <h5 class="card-title">Visual Arah Angin</h5>
                                   </div>
                                   <div class="card-body">
-                                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1552083/widgets/382796"></iframe>
+                                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/apps/matlab_visualizations/442441"></iframe>
                                     <ul>
                                       @foreach($node2 as $t)
                                         <li>Data diambil pada : {{date('Y-m-d H:i:s', strtotime($t->waktu))}}</li>
